@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sacola Fretes</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsivo.css" />
+    <script src="https://kit.fontawesome.com/1b69b72d80.js" crossorigin="anonymous"></script>
+    <script src="menu.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Menu -->
+
+    <nav class="navbar scrolled">
+        <div class="logo">Sacola Fretes</div>
+    
+        <div class="hamburger-menu" id="hamburger-menu" onclick="clickMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <ul class="nav-links">
+            <li><a href="#topo">Início</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bolinha do Whatsapp -->
+
+    <div class="whatsapp-float">
+        <a href="https://web.whatsapp.com/send?phone=+5551981733525&text=Olá,%20acessei%20o%20site%20e%20estou%20interessado%20nos%20serviços.%20Gostaria%20de%20mais%20informações,%20por%20favor."
+            target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+
+    <header id="topo" class="topPage">
+
+        <!-- Título -->
+
+        <div class="container">
+            <h1>Não gaste seu <span class="corAmarelo">tempo</span> e <span class="corAmarelo">dinheiro</span>!!</h1>
+            <p>Sacola fretes é a melhor opção!</p>
+            <button id="direcionaBtn" class="botao" onclick="window.location.href='orçamento.html'">Fazer
+                orçamento</button>
+
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Section 1 -->
+
+        <section id="about" class="section-1 container">
+            <div class="container">
+                <h2><span class="corAzul">Sobre Nós</span></h2>
+                <p class="fontDescricaoSobreNos">
+                    O Sacola Fretes é uma empresa de fretes e manutenções que surgiu da determinação e força de
+                    vontade de Fabricio, um empreendedor com uma paixão inabalável por seus negócios. A empresa evoluiu
+                    de um simples desejo de fornecer serviços excepcionais e se transformou em uma empresa dedicada a
+                    fornecer soluções de transporte e manutenção de alta qualidade.
+                </p>
+                <br>
+                <p class="fontDescricaoSobreNos">
+                    A fundação da nossa empresa foi impulsionada pela coragem e determinação de Fabricio. Sua visão e
+                    comprometimento com a qualidade estabelecem o padrão para todas as nossas atividades.
+                </p>
+                <br>
+                <p class="fontDescricaoSobreNos">
+                    Na Sacola Fretes, acreditamos que a excelência contínua e atenção aos detalhes são as chaves
+                    para o sucesso. Além de manutenção de cataventos e ar-condicionados de alta qualidade, oferecemos
+                    serviços de frete
+                    rápidos e seguros.
+                </p>
+                <br>
+                <p class="fontDescricaoSobreNos">
+                    Estamos aqui para resolver problemas, criar soluções e tornar sonhos realidade. Experimente o
+                    impacto da dedicação e da paixão se juntar a nós.
+                </p>
+                <br>
+                <p class="impactDescricaoSobreNos">
+                    Sacola Fretes – Onde a força de vontade encontra a excelência.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!--Section 2-->
+
+        <section class="section-2">
+            <div class="container">
+                <h3> <span class="corAmarelo">Criador</span> da empresa </h3>
+                <div class=" alinhamentoS2">
+                    <img class="imgPessoa" src="./img/pessoa.png" alt="Foto do CEO da Sacola Fretes">
+
+                    <p class="fontDescricaoImagem">
+                        Fabricio, ou Sacola, é a alma e o coração da empresa. Sacola começou sua jornada com
+                        um pequeno caminhão e um grande sonho porque tinha um espírito incansável e uma paixão genuína
+                        por ajudar os outros.
+                        <br>
+                        Sacola sempre acreditou que servir com honestidade e integridade era o caminho para o sucesso, e
+                        isso pode ser visto em todos os aspectos de seu trabalho.Transformou seu desejo de ajudar
+                        em uma empresa que representa respeito e qualidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 3-->
+
+        <section id="services" class="section-3">
+            <div class="container">
+                <h2>Serviços que <span class="corAzul"> fornecemos</span></h2>
+                <ul>
+                    <li class="grid-1-3">
+                        <img src="./img/caixa-de-entrega.png">
+                        <h3> <span class="corAmarelo">Fretes</span> pela região sul</h3>
+                        <br>
+                        <p>Oferecemos frete rápido e dedicado para toda a região Sul do Brasil. Garantimos a entrega
+                            segura e rápida de seus móveis ou mercadorias. Oferecendo soluções de
+                            transporte personalizadas para suas necessidades específicas.</p>
+                    </li>
+                    <li class="grid-1-3">
+                        <img src="./img/ar-condicionado.png">
+                        <h3> <span class="corAmarelo">Instalação</span> e <span class="corAmarelo">manutenção</span> de
+                            ar
+                            condicionado</h3>
+                        <br>
+                        <p> Para garantir conforto e eficiência em seu sistema de climatização, oferecemos serviços
+                            especializados em instalação e manutenção de ar condicionado, garantindo o melhor desempenho
+                            e durabilidade do equipamento.</p>
+                    </li>
+                    <li class="grid-1-3">
+                        <img src="./img/cata-vento.png">
+                        <h3><span class="corAmarelo">Instalação</span> e <span class="corAmarelo">manutenção</span> de
+                            cataventos</h3>
+                        <br>
+                        <p>Nós somos especialistas em instalação e manutenção de cataventos, uma instalação precisa e
+                            segura é garantida por nossa empresa, o que maximiza o desempenho dos
+                            cata-ventos e garante sua durabilidade.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Section 4 -->
+
+        <section class="section-4">
+            <div class="container">
+                <div class="cta grid-8">
+                    <p>Meu compromisso</p>
+                    <h2><span class="corPreto">Atender</span> e <span class="corPreto">entregar</span> um<br> serviço de
+                        alta qualidade<br> com o melhor preço!</h2>
+                    <div>
+                        <ul>
+                            <li><span class="corAmarelo"><i class="fa-solid fa-arrow-right"></i></span> Pagamentos
+                                somente a
+                                vista</li>
+                            <hr>
+                            <li><span class="corAmarelo"><i class="fa-solid fa-arrow-right"></i></span> Prioridade para
+                                a
+                                área sul do Brasil
+                            </li>
+                            <hr>
+                            <li><span class="corAmarelo"><i class="fa-solid fa-arrow-right"></i></span> Combinar comigo
+                                com
+                                uma consulta</li>
+                            <hr>
+                            <li><span class="corAmarelo"><i class="fa-solid fa-arrow-right"></i></span> Garantia de um
+                                trabalho bem feito
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="botao" id="direcionaBtn" class="botao"
+                        onclick="window.location.href='orçamento.html'">Fazer uma consulta</button>
+                </div>
+                <img class="freteiro grid-8" src="./img/delivery-man-cartoon-00554c.jpg">
+            </div>
+        </section>
+
+        <!-- section 4.5 -->
+
+        <section class="section-4_5">
+            <div class="container">
+                <ul>
+                    <li class="grid-1-2 ">
+                        <h2 class="titulo-4_5">Porque nos <span class="corPreto">escolher</span></h2>
+
+                        <h3><i class="fa-solid fa-truck-arrow-right"></i> Entrega <span
+                                class="corAmarelo2">Rápida</span> e <span class="corAmarelo2">Segura</span></h3>
+                        <p>Garantimos que suas demandas serão entregues no prazo e em perfeitas condições.</p>
+                        <br>
+
+                        <h3><i class="fa-solid fa-hand-holding-dollar"></i> Preço <span
+                                class="corAmarelo2">Competitivo</span></h3>
+                        <p>Oferecemos preços justos e competitivos para todos os nossos 3 tipos de serviços.</p>
+                        <br>
+
+                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> <span class="corAmarelo2">Manutenção</span> e
+                            <span class="corAmarelo2">Suporte</span>
+                        </h3>
+                        <p>Oferecemos suporte contínuo e manutenção regular para garantir o funcionamento ideal de seu
+                            produto.</p>
+                    </li>
+
+                    <li class="grid-1-2">
+                        <div class="estatistica">
+                            <div class="item">
+                                <i class="fa-solid fa-truck-ramp-box"></i>
+                                <h2>5000+</h2>
+                                <p>Atendimentos feitos com sucesso</p>
+                            </div>
+                            <div class="item">
+                                <i class="fa-solid fa-users"></i>
+                                <h2>8000</h2>
+                                <p>Clientes satisfeitos</p>
+                            </div>
+                            <div class="item">
+                                <i class="fa-regular fa-clock"></i>
+                                <h2>+2 anos</h2>
+                                <p>Experiência de trabalho</p>
+                            </div>
+                            <div class="item">
+                                <i class="fa-regular fa-lightbulb"></i>
+                                <h2>2000</h2>
+                                <p>Soluções</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!--Section 5-->
+
+        <section class="section-5">
+            <div class="container">
+                <h2>Minha <span class="corVermelho">Localização</span></h2>
+            </div>
+            <iframe class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46844.63880966515!2d-51.88491749268599!3d-29.230948045000268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c5ae6e84b0635%3A0x1aed1333bb2c8609!2sEncantado%2C%20RS%2C%2095960-000!5e0!3m2!1spt-BR!2sbr!4v1723464499902!5m2!1spt-BR!2sbr"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!--Section 6-->
+
+        <section id="contact" class="section-6">
+            <div class="container">
+                <div class="cat2 grid-8">
+                    <h2>Entre em <span class="corVermelho">contato</span> comigo</h2>
+                    <p>se interessou pelos seriços? Você pode entrar em contato comigo por meio destes canais de
+                        atendimento.</p>
+
+                    <ul class="contatos">
+                        <li>
+                            <h3><i class="fa-solid fa-location-dot"></i> Localização</h3>
+                            <br>
+                            <p>Rua alguma coisa <br>
+                                Encantado <br>
+                                96950000
+                            </p>
+                        </li>
+                        <li>
+                            <h3><i class="fa-solid fa-phone"></i> Telefone</h3>
+                            <br>
+                            <p>+55 51 981733525</p>
+                        </li>
+                        <li>
+                            <h3><i class="fa-solid fa-envelope"></i> E-mail</h3>
+                            <br>
+                            <p>fretes@gmail.com</p>
+                        </li>
+                    </ul>
+
+                    <button class="botao" id="direcionaBtn" class="botao"
+                        onclick="window.location.href='orçamento.html'">Converse comigo</button>
+                </div>
+                <img src="./img/imagemIA.png">
+            </div>
+        </section>
+
+        <!--Section 7-->
+
+        <section class="section-7">
+            <div class="container">
+                <h2>Clientes que <span class="corAmarelo">confiaram</span> em nosso serviço</h2>
+                <div class="depoimento">
+                    <ul>
+                        <li class="grid-1-3">
+                            <img class="pessoa1" src="./img/pessoa.png">
+                            <h3><span class="corAmarelo">Claudio</span></h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </li>
+                        <li class="grid-1-3">
+                            <img class="pessoa1" src="./img/pessoa.png">
+                            <h3><span class="corAmarelo">Claudio</span></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </li>
+                        <li class="grid-1-3">
+                            <img class="pessoa1" src="./img/pessoa.png">
+                            <h3><span class="corAmarelo">Claudio</span></h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                        </li>
+                        <li class="grid-1-3">
+                            <img class="pessoa1" src="./img/pessoa.png">
+                            <h3><span class="corAmarelo">Claudio</span></h3>
+                            <p>Lorem ipsum dolor, commodi voluptatum tenetur repellat!</p>
+                        </li>
+                        <li class="grid-1-3">
+                            <img class="pessoa1" src="./img/pessoa.png">
+                            <h3><span class="corAmarelo">Claudio</span></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </li>
+                        <li class="grid-1-3">
+                            <img class="pessoa1" src="./img/pessoa.png">
+                            <h3><span class="corAmarelo">Claudio</span></h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8 -->
+
+        <section class="section-8">
+            <div class="container">
+                <img class="garantia" src="./img/Garantia-Incondicional-6-meses.webp">
+                <h2>Garantia de 6 meses</h2>
+                <p>Oferecemos uma garantia de seis meses para todos os serviços, garantindo que
+                    nossos clientes se sintam totalmente seguros. Durante esse período, qualquer problema com o serviço
+                    será resolvido gratuitamente.
+                </p>
+                <hr>
+                <p>
+                    Sacola Fretes – comprometidos com a qualidade e garantindo que você esteja totalmente
+                    satisfeito.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre Nós</h4>
+                <p>Somos uma empresa dedicada a oferecer os melhores serviços de entrega com alta qualidade e preço
+                    acessível.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Endereço: Encantado, Rio Grande Do Sul</p>
+                <p>Telefone: +55 51 981733525</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-direitos">
+            <p>&copy; 2024 Guilherme Rosa Bagatini. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

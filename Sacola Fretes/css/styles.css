@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Correção da barra de rolagem horizontal no tablet */
+body {
+    overflow-x: hidden;
+}
+
+/* Menu --------------------------- */
+
+.navbar {
+    background-color: transparent;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #333333ec;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Josefin Sans';
+}
+
+/* Menu principal oculto no desktop */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans';
+}
+
+/* Menu de hambúrguer no mobile */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-links li a {
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+
+/* Bolinha do Whats */
+
+.whatsapp-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    /* Cor de fundo da bolinha */
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+
+.whatsapp-float i {
+    margin-top: 10px;
+}
+
+.whatsapp-float a {
+    color: white;
+    display: block;
+}
+
+
+
+/* Inicio --------------------------- */
+
+.topPage {
+    width: 100%;
+    height: 800px;
+    background: url(../img/Background.png) no-repeat center center;
+    background-size: cover;
+    padding-left: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.topPage h1 {
+    font-family: 'Poppins';
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: uppercase;
+    padding-top: 260px;
+
+}
+
+.topPage p {
+    padding-top: 10px;
+    font-family: 'Montserrat';
+    color: #FFBE00;
+    font-weight: bold;
+}
+
+.impactDescricaoSobreNos{
+    font-weight: bold;
+}
+
+/* Section 1 --------------------------- */
+
+.section-1 h2 {
+    font-family: 'Poppins';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 15px 0px 15px;
+    margin: 20px 0px 20px 0px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.section-1 p {
+    font-family: 'Montserrat';
+}
+
+.section-1 h3 {
+    font-family: 'Montserrat';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px 0px 15px;
+}
+
+.imagemCaminhao {
+    padding: 60px 0px 0px 0px;
+}
+
+/* Section 2 --------------------------- */
+
+.section-2 {
+    width: 100%;
+    padding: 50px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(164, 164, 164, 0.2);
+    border: 1px solid rgba(164, 164, 164, 0.3);
+
+}
+
+.section-2 h3 {
+    font-family: 'Poppins';
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px 0px 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.alinhamentoS2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fontDescricaoImagem {
+    font-family: 'Montserrat';
+    color: #000;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+.imgPessoa {
+    width: 200px;
+    height: 200px;
+    background: #838383d8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Section 3 --------------------------- */
+
+.section-3 h2 {
+    font-family: 'Poppins';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 50px 0px 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.section-3 h3 {
+    font-family: 'Montserrat';
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px 0px 15px;
+}
+
+.section-3 li {
+    margin-top: 40px;
+    background-color: #0e5abd;
+    color: white;
+    width: 300px;
+    height: 400px;
+    border-radius: 30px 10px;
+    border-style: solid;
+    border-width: 0px 0px 4px 0px;
+    border-color: #FFBE00;
+    box-shadow: 0px 13px 21px rgba(0, 0, 0, 0.5);
+    padding: 20px 20px 30px 20px;
+    margin-bottom: 50px;
+
+}
+
+.section-3 p {
+    font-family: 'Montserrat';
+}
+
+/* Section 4 --------------------------- */
+
+.section-4 i {
+    padding-right: 10px;
+}
+
+.freteiro {
+    padding-top: 50px;
+}
+
+.section-4 p {
+    margin-top: 50px;
+    font-family: 'Montserrat';
+    font-weight: italic;
+    text-transform: uppercase;
+}
+
+.section-4 h2 {
+    font-family: 'Poppins';
+    color: rgb(82, 82, 82);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.section-4 li {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-4 ul {
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+/* Section 4.5 --------------------------- */
+
+.section-4_5 {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.section-4_5 ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-4_5 li {
+    padding: 20px;
+    flex: 1;
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.section-4_5 h2 {
+    font-family: 'Poppins';
+    color: rgb(82, 82, 82);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.section-4_5 .titulo-4_5 {
+    padding-bottom: 10px;
+}
+
+.section-4_5 h3 {
+    font-family: 'Montserrat';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.section-4_5 p {
+    font-family: 'Montserrat';
+    font-weight: italic;
+}
+
+.section-4_5 i {
+    font-size: 24px;
+    color: #000;
+    margin: 10px 10px 0px 0px;
+}
+
+.section-4_5 .estatistica p {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: italic;
+}
+
+/* Define layout 2x2 para os itens */
+.section-4_5 .estatistica {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.section-4_5 .item {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-4_5 .item i {
+    font-size: 24px;
+    color: #FE9900;
+    margin-bottom: 10px;
+}
+
+.section-4_5 .item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.section-4_5 .estatistica h2 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #FE9900;
+}
+
+
+
+/* Section 5 --------------------------- */
+
+.mapa {
+    width: 100%;
+    height: 550px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.section-5 h2 {
+    font-family: 'Poppins';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 50px 0px 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Section 6 --------------------------- */
+
+.section-6 h2 {
+    font-family: 'Poppins';
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 0px 0px 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.section-6 p {
+    font-family: 'montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.cat2 p {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contatos h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #d60c0c;
+}
+
+.section-6 i {
+    padding-right: 7px;
+}
+
+.section-6 img {
+    width: 350px;
+    height: 350px;
+    margin: 100px 0px 0px 100px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Section 7 --------------------------- */
+
+.section-7 h2 {
+    font-family: 'Poppins';
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 50px 0px 15px;
+}
+
+.section-7 h3 {
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.section-7 li {
+    margin-top: 30px;
+    width: 300px;
+    height: 450px;
+    background: rgba(142, 142, 142, 0.295);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.section-7 p {
+    margin: 10px;
+    color: rgb(255, 246, 235);
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.pessoa1 {
+    width: 200px;
+    height: 200px;
+    margin: 10px 10px 10px 50px;
+    background: #FFBE00;
+    border-radius: 50%;
+    box-sizing: content-box;
+    object-fit: cover;
+
+}
+
+.section-7 {
+    width: 100%;
+    background: url(../img/blur-background-2.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 30px;
+}
+
+/* section 8 --------------------------- */
+
+.section-8 {
+    width: 100%;
+    background-color: #24636C;
+    text-align: center;
+    padding: 40px 20px; 
+    box-sizing: border-box; 
+}
+
+.section-8 img {
+    padding-top: 20px;
+    width: 300px;
+}
+
+.section-8 h2 {
+    font-family: 'Poppins';
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px; 
+}
+
+.section-8 p {
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+/* Rodapé --------------------------- */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #333;
+    line-height: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #FFBE00;
+}
+
+.footer-direitos {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* adicionais de estilização --------------------------- */
+
+.corAmarelo {
+    color: #FFBE00;
+}
+
+.corAmarelo2 {
+    color: #FE9900;
+}
+
+.corAzul {
+    color: #0e5abd;
+}
+
+.corVermelho {
+    color: #d60c0c;
+}
+
+.corPreto {
+    color: #000000f1;
+}
+
+.botao {
+    font-family: 'poppins';
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(#E5403E, #862828);
+    box-shadow: 0px 13px 21px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.botao:hover {
+    background: linear-gradient(#b92a28, #701515);
+}
