@@ -34,21 +34,10 @@ body {
     font-family: 'Josefin Sans';
 }
 
-/* Menu principal oculto no desktop */
 .nav-links {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     font-family: 'Josefin Sans';
-}
-
-/* Menu de hambúrguer no mobile */
-.hamburger-menu {
-    display: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
 }
 
 .nav-links li a {
@@ -58,9 +47,22 @@ body {
     color: #fff;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-icon span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
 .nav-links a:hover {
     color: #f39c12;
 }
+
 
 
 /* Bolinha do Whats */

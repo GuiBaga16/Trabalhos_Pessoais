@@ -23,17 +23,24 @@
     <nav class="navbar scrolled">
         <div class="logo">Sacola Fretes</div>
     
-        <div class="hamburger-menu" id="hamburger-menu" onclick="clickMenu()">
-            <i class="fas fa-bars"></i>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburgerIcon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     
-        <ul class="nav-links">
-            <li><a href="#topo">Início</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#contact">Contato</a></li>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#topo" onclick="closeMenu()">Início</a></li>
+            <li><a href="#services" onclick="closeMenu()">Serviços</a></li>
+            <li><a href="#about" onclick="closeMenu()">Sobre</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contato</a></li>
         </ul>
     </nav>
+    
+    
+
 
     <!-- Bolinha do Whatsapp -->
 

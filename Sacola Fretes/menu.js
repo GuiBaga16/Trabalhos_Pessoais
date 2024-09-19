@@ -7,22 +7,24 @@ window.addEventListener('scroll', function () {
     }
 });
 
-function clickMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-    } else {
-        navLinks.classList.add('active');
-    }
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const hamburgerIcon = document.getElementById("hamburgerIcon");
+
+    // Alternar a exibição do menu
+    navLinks.classList.toggle("show");
+
+    // Alternar a animação do ícone de hambúrguer
+    hamburgerIcon.classList.toggle("open");
 }
 
-// Adicionar evento de clique para minimizar o menu quando um link for clicado
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('active');
-    });
-});
+function closeMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const hamburgerIcon = document.getElementById("hamburgerIcon");
 
+    // Fechar o menu
+    navLinks.classList.remove("show");
 
-
+    // Reverter a animação do ícone de hambúrguer
+    hamburgerIcon.classList.remove("open");
+}
