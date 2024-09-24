@@ -9,6 +9,8 @@ body {
 
 /* Menu --------------------------- */
 
+
+/* Menu */
 .navbar {
     background-color: transparent;
     padding: 15px;
@@ -51,19 +53,52 @@ body {
     display: none;
 }
 
+.hamburger-icon {
+    cursor: pointer;
+}
+
 .hamburger-icon span {
     display: block;
     height: 3px;
     width: 30px;
     background-color: #fff;
+    margin: 5px;
     transition: 0.3s;
 }
+
+.hamburger-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-links.active {
+    display: block;
+    /* Adicione outras regras aqui para o estado aberto do menu */
+}
+
 
 .nav-links a:hover {
     color: #f39c12;
 }
 
+#topo, #contact {
+    scroll-margin-top: 80px;
+}
 
+#about, #services{
+    scroll-margin-top: 55px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 /* Bolinha do Whats */
 
@@ -101,8 +136,9 @@ body {
     height: 800px;
     background: url(../img/Background.png) no-repeat center center;
     background-size: cover;
-    padding-left: 350px;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    text-align: center;
 }
 
 .topPage h1 {
