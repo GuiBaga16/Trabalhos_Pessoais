@@ -42,7 +42,7 @@
 .grid-14 { width: 820px; }
 .grid-15 { width: 880px; }
 .grid-16 { width: 940px; }
-.grid-1-2 { width: 420px; }
+.grid-1-2 { width: 460px; }
 .grid-1-3 { width: 300px; }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
