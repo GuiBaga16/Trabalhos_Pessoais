@@ -16,12 +16,12 @@
 </ul>
 -No html utilizei uma organização bastante intuitiva:
 <ul>
-  <li>Container utilizados para alinhamento de margem</li>
+  <li>Container utilizados para alinhamento de margem;</li>
   <li>Denominei as respectivas seções com o nome das mesmas,<br>
-    exemplo: section class="section-2"</li>
-  <li>Foram utilizado marcadores de seção para um melhor entedimento</li>
+    exemplo: section class="section-2";</li>
+  <li>Foram utilizado marcadores de seção para um melhor entedimento;</li>
 </ul>
 
-OBS: Este é o meu rimeiro projeto disponivel na web, apesar das dificuldades
+OBS: Este é o meu primeiro projeto disponivel na web, apesar das dificuldades
 fiquei satisfeito com os resultados.
 
