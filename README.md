@@ -1,18 +1,18 @@
 # Trabalhos_Pessoais
--Repositório dedicado a projetos por mim mesmo.
+Repositório dedicado a projetos desenvolvidos por mim..
 
 <h3>Projeto Sacola Fretes</h3>
--Feito todo o código a mão, para fins de aprendizado;<br>
--Com o objetivo de anunciar o trabalho por meio de uma lading page;<br>
--Feito de forma stática, apenas direcionando orçamentos por whatsapp;<br>
--A logica dos botões foi feita com JavaScript;<br>
--Provisoriamente utilizei do netlify para hospedar meu site;<br>
+Todo o código foi feito à mão, para fins de aprendizado.<br>
+O objetivo é anunciar o trabalho por meio de uma landing page.<br>
+Desenvolvido de forma estática, apenas direcionando orçamentos por WhatsApp.<br>
+A lógica dos botões foi implementada com JavaScript.<br>
+Utilizei provisoriamente o Netlify para hospedar meu site.<br>
 <br>
--Utilizei padronizações de estilo como:
+<h4>Estrutura do HTML</h4>
 <ul>
-<li>grid;</li>
-<li>normalize;</li>
-<li>reset;</li>
+<li>Grid</li>
+<li>Normalize</li>
+<li>Reset</li>
 </ul>
 -No html utilizei uma organização bastante intuitiva:
 <ul>
