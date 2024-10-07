@@ -8,13 +8,13 @@ Desenvolvido de forma estática, apenas direcionando orçamentos por WhatsApp.<b
 A lógica dos botões foi implementada com JavaScript.<br>
 Utilizei provisoriamente o Netlify para hospedar meu site.<br>
 <br>
-<h4>Estrutura do HTML</h4>
+<h4>Foram usados as seguintes padronizações de estilização:</h4>
 <ul>
 <li>Grid</li>
 <li>Normalize</li>
 <li>Reset</li>
 </ul>
--No html utilizei uma organização bastante intuitiva:
+<h4>Estrutura do HTML</h4>
 <ul>
   <li>Container utilizados para alinhamento de margem;</li>
   <li>Denominei as respectivas seções com o nome das mesmas,<br>
