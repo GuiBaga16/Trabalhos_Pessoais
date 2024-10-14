@@ -1,7 +1,7 @@
 // fundo transparente no menu
 window.addEventListener('scroll', function () {
     var navbar = document.querySelector('.navbar');
-    if (window.scrollY > 0) {
+    if (window.scrollY > 750) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
