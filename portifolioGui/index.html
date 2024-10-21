@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsivo.css" />
+    <link rel="stylesheet" href="./css/botao.css" />
     <script src="https://kit.fontawesome.com/1b69b72d80.js" crossorigin="anonymous"></script>
     <title>Guilherme.dev</title>
 </head>
 
-
-
 <body>
     <header class="top">
         <div class="navbar">
-            <div class="logo">&copy;Code by Guilherme</div>
+            <div class="logo">&copy; Code by Guilherme</div>
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
@@ -31,46 +34,69 @@
             </nav>
         </div>
 
-        <div class="container-descricao">
-            <i class="fa-solid fa-angle-right"></i> Estudando<br> e se expecializando em<br> Programação <i class="fa-regular fa-window-minimize"></i>
+        <div class="descricao">
+            <i class="fa-solid fa-angle-right"></i> Estudando<br> e se especializando em<br> Programação <i
+                class="fa-regular fa-window-minimize elemento-piscando"></i>
         </div>
-        
-        <h1>Guilherme Bagatini</h1>
-        <img class="imgPessoa" src="./img/design-a3de5907-68cd-4960-9b79-ab95af293fd6.png" alt="pessoa">
+
+        <h1 class="titulo">Guilherme Bagatini</h1>
+        <img class="imgPessoa" src="./img/design-a3de5907-68cd-4960-9b79-ab95af293fd6.png" alt="Guilherme Bagatini">
     </header>
 
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatum, quidem id itaque et alias
-            similique, maiores excepturi laborum iusto delectus.</p>
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <div class="about">
+                    <div class="grid-1-2">
+                        <p class="informacoes">Procurando aprender e se desenvolver na área de programação, atualmente
+                            estudando e fazendo alguns projetos.</p>
+                    </div>
+                    <div class="grid-1-2">
+                        <p class="informacoes2">Aqui vou motrar alguns projetos que tive o prazer de fazer, se precisar
+                            de mais informações basta clicar no botão.</p>
+                            <hr>
+                    </div>
+                </div>
+            </div>
+            <section class="portfolio-experiment">
+                <a>
+                    <span class="text">Sobre mim</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                </a>
+            </section>
+        </section>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus et enim aspernatur,
-            nam perspiciatis quos perferendis.</p>
+        <section class="projetos">
+            <div class="container">
+                <h4 class="pequeno-titulo">Trabalhos Recentes</h4>
+                <p class="project-1-titulo">SACOLA FRETES</p>
+                <a href="https://sacolafretes.netlify.app/" class="styled-link">Ver Mais Detalhes</a>
+            </div>
+        </section>
 
-        <button>sobre mim</button>
-    </section>
-
-    <section>
-        <h4>Trabalhos recentes</h4>
-
-    </section>
-
-    <section>
-        <h4>Informações</h4>
-
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, consectetur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, necessitatibus!</p>
-
-        <button>Entre em Contato</button>
-    </section>
+        <section>
+            <h4>Informações</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, necessitatibus!</p>
+            <button class="contato">Entre em Contato</button>
+        </section>
+    </main>
 
     <footer>
-        <h5>versão</h5>
-        <h5>sociais</h5>
-        <ul>
-            <li><a>Instagram</a></li>
-            <li><a>Linkedin</a></li>
-            <li><a>Github</a></li>
-        </ul>
+        <div class="versao">
+            <h5>Versão: 1.0</h5>
+        </div>
+        <div class="sociais">
+            <h5>Sociais</h5>
+            <ul>
+                <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                <li><a href="#" aria-label="Linkedin">LinkedIn</a></li>
+                <li><a href="#" aria-label="Github">GitHub</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 
