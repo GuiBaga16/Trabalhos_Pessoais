@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/responsivo.css" />
     <link rel="stylesheet" href="./css/botao.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1b69b72d80.js" crossorigin="anonymous"></script>
     <title>Guilherme.dev</title>
 </head>
@@ -17,29 +18,35 @@
 <body>
     <header class="top">
         <div class="navbar">
-            <div class="logo">&copy; Code by Guilherme</div>
-            <nav>
-                <ul class="nav-links" id="navLinks">
+
+            <nav class="nav-links" id="navLinks">
+                <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-                <div class="hamburger-menu">
-                    <button class="hamburger-icon" id="hamburgerIcon" aria-label="Menu" onclick="toggleMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
             </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div id="trilho" class="trilho">
+                <div class="indicador"></div>
+            </div>
         </div>
 
         <div class="descricao">
-            <i class="fa-solid fa-angle-right"></i> Estudando<br> e se especializando em<br> Programação <i
-                class="fa-regular fa-window-minimize elemento-piscando"></i>
+            <div class="container">
+                <i class="fa-solid fa-angle-right"></i> Estudando<br> e se especializando em<br> Programação <i
+                    class="fa-regular fa-window-minimize elemento-piscando"></i>
+            </div>
         </div>
 
         <h1 class="titulo">Guilherme Bagatini</h1>
+
         <img class="imgPessoa" src="./img/design-a3de5907-68cd-4960-9b79-ab95af293fd6.png" alt="Guilherme Bagatini">
     </header>
 
@@ -47,14 +54,24 @@
         <section class="about-section">
             <div class="container">
                 <div class="about">
-                    <div class="grid-1-2">
-                        <p class="informacoes">Procurando aprender e se desenvolver na área de programação, atualmente
-                            estudando e fazendo alguns projetos.</p>
+
+                    <div data-aos="zoom-out" data-aos-duration="1500">
+
+                        <div class="grid-1-2">
+                            <p class="informacoes"><i class="fa-solid fa-laptop-code"></i>Procurando aprender e se
+                                desenvolver na área de programação, atualmente
+                                estudando e fazendo alguns projetos.</p>
+                        </div>
+
                     </div>
-                    <div class="grid-1-2">
-                        <p class="informacoes2">Aqui vou motrar alguns projetos que tive o prazer de fazer, se precisar
-                            de mais informações basta clicar no botão.</p>
-                            <hr>
+
+                    <div data-aos="zoom-out" data-aos-duration="1500">
+
+                        <div class="grid-1-2">
+                            <p class="informacoes2">Aqui vou motrar alguns projetos que tive o prazer de fazer, se
+                                precisar
+                                de mais informações basta clicar no botão.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,7 +114,17 @@
                 <li><a href="#" aria-label="Github">GitHub</a></li>
             </ul>
         </div>
+        <div>
+            <div class="codeBy">&copy; Code by Guilherme</div>
+        </div>
     </footer>
+    <script src="./js/coloracao.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

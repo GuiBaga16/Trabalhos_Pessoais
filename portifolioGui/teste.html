@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo AOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div data-aos="fade-up">
+        <h1>Texto com Fade Up</h1>
+    </div>
+
+    <div data-aos="zoom-in" data-aos-delay="300">
+        <p>Zoom In com atraso de 300ms</p>
+    </div>
+
+    <div data-aos="slide-right" data-aos-duration="2000">
+        <p>Slide Right com duração de 2 segundos</p>
+    </div>
+
+    <!-- Animação padrão -->
+    <div data-aos="fade-up">aaaaaaaaaaaaaa</div>
+
+    <!-- Animação com duração personalizada -->
+    <div data-aos="fade-up" data-aos-duration="1500">bbbbbbbbbbbbbbb</div>
+
+    <!-- Animação com atraso -->
+    <div data-aos="fade-up" data-aos-delay="300">ccccccccccccccccccc</div>
+
+    <!-- Animação que só acontece uma vez -->
+    <div data-aos="fade-up" data-aos-once="true">ddddddddddddddddddddddddd</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
