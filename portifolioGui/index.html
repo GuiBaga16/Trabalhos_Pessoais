@@ -86,37 +86,47 @@
 
         <section class="projetos">
             <div class="container">
+                <p class="titulo-animado">
+                    <span>Trabalhos recentes</span>
+                </p>
+        
+                <div class="project-item" onmousemove="moveWithCursor(event, this)" onmouseleave="resetPosition(this)">
+                    <p class="project-title">SACOLA FRETES</p>
+                    <div class="project-overlay">
+                        <img src="./img/capa-projeto-1.PNG" alt="Imagem do Projeto" class="project-image">
+                        <a href="https://sacolafretes.netlify.app/" class="view-button">View</a>
+                    </div>
+                </div>                               
                 
-                    <p class="titulo-animado">
-                        <span>
-                            Trabalhos recentes
-                        </span>
-                    </p>
-                    <p class="project-1-titulo">SACOLA FRETES</p>
-                    <a href="https://sacolafretes.netlify.app/" class="styled-link">Ver Mais Detalhes</a>
+                <div data-aos="zoom-out" data-aos-duration="500">
                     <p class="row"></p>
+                </div>
 
-                    <!--TODO: acrescentar projetos -->
+                <!-- TODO: colocar mais projetos -->
 
             </div>
-        </section>
+        </section>        
+               
 
         <section class="contact">
             <div class="container">
-                <h4 class="">Fale comigo</h4>
-
+                <h2 class="contact-title">Fale Comigo</h2>
                 <div class="grid-1-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <p> (51) 99599-5875</p>
-
-                    <i class="fa-regular fa-envelope"></i>
-                    <p> guirbagatini@gmail.com</p>
+                    <div class="contact-info">
+                        <i class="fa-solid fa-phone contact-icon"></i>
+                        <p class="contact-text">(51) 99599-5875
+                            (WhatsApp)
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fa-regular fa-envelope contact-icon"></i>
+                        <p class="contact-text">guirbagatini@gmail.com</p>
+                    </div>
                 </div>
-                <div class="grid-1-2">
+                <div class=" grid-1-2">
                     <h4>Entre em Contato</h4>
                     <button class="contato">Enviar via WhatsApp</button>
                 </div>
-
             </div>
         </section>
     </main>
@@ -139,6 +149,7 @@
     </footer>
     <script src="./js/coloracao.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/seguirCursor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();

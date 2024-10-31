@@ -308,43 +308,123 @@ h1 {
 
 /*!--------!*/
 
-.project-1-titulo {
-    font-size: 25px;
-    font-family: 'Work Sans';
+.projetos{
+    text-align: center;
 }
 
-.styled-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+.projetos .project-item {
+    position: relative;
     font-family: 'Work Sans', sans-serif;
-    color: rgb(0, 0, 0);
-    background-color: #bbbbbb;
+    cursor: pointer;
+}
+
+.project-item{
+    padding: 30px;
+    position: relative;
+}
+
+.project-title {
+    font-size: 25px;
+    font-family: 'Work Sans';
+    z-index: 2; 
+}
+
+.project-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay img {
+    z-index: 2;
+    object-fit: cover; 
+    position: absolute; 
+    max-width: 300px; 
+    max-height: 300px;
+    width: auto; 
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s ease; 
+}
+
+.view-button {
+    position: absolute;
+    background-color: #F77309;
+    width: 60px;
+    height: 60px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: transform 1s linear;
+    z-index: 3;
+    transform: translate(-50%, -50%); 
+}
+
+
+.view-button:hover {
+    transform: scale(1.1);
 }
 
 .row {
     margin-top: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #F77309;
+    border-bottom: 1px solid #F77309;   
 }
 
 /*? Section Contato !*/
 
-.contact h4 {
-    font-size: 25px;
-    font-family: 'Ubuntu';
+.contact-title {
+    font-family: 'Work Sans';
+    font-size: 36px;
     font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 30px;
 }
 
-.talk-with-me {
-    padding: 100px 0px 0px;
+.contact-info {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o ícone e o texto */
+    font-size: 18px;
 }
 
+.contact-icon {
+    font-size: 25px;
+    color: #F77309; 
+    margin-right: 10px; 
+}
+
+.contact-text {
+    padding-bottom: 30px; 
+    font-family: 'Montserrat';
+}
+
+.contato {
+    padding: 12px 20px;
+    background-color: #F77309; /* Cor de fundo do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contato:hover {
+    background-color: #ac5106; /* Cor do botão ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
 
 /*! Footer !*/
 
