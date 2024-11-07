@@ -1,4 +1,4 @@
-/* Button */
+/** Button sobre mim **/
 
 .portfolio-experiment {
     margin-left: auto; 
@@ -7,7 +7,7 @@
 }
 
 .portfolio-experiment a {
-    color: #1f1f1f;
+    /* color: #1f1f1f; */
     padding: 0.7em calc(0.7em * 1.2);
     display: inline-block;
     border: 3px solid transparent;
@@ -130,7 +130,7 @@
     transform-origin: left;
 }
 
-/* mudar cor */
+/** mudar cor **/
 
 /* Trilho */
 .trilho {
@@ -164,9 +164,22 @@
     background-color: #fff;
 }
 
-body.dark {
-    background-color: #ffffff;
+/* Estilos para o corpo em modo escuro */
+
+.about-section.dark {
+    background-color: #e4e4e4; /* Cor da seção 'Sobre Mim' */
     color: #333;
 }
+
+.projects-section.dark {
+    background-color: #aaaaaa; /* Cor da seção 'Projetos' */
+    color: #000000;
+}
+
+.contact-section.dark {
+    background-color: #e4e4e4; /* Cor da seção 'Projetos' */
+    color: #000000;
+}
+
 
   

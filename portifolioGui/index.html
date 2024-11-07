@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -15,10 +15,9 @@
     <title>Guilherme.dev</title>
 </head>
 
-<body>
+<body id="pageBody">
     <header class="top">
-        <div class="navbar">
-
+        <div class="navbar" data-aos="fade-down" data-aos-duration="1000">
             <nav class="nav-links" id="navLinks">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -33,7 +32,7 @@
                 <span></span>
             </div>
 
-            <div id="trilho" class="trilho">
+            <div id="trilho" class="trilho" onclick="toggleDarkMode()">
                 <div class="indicador"></div>
             </div>
         </div>
@@ -43,6 +42,12 @@
                 <p class="line typing-animation"><i class="fa-solid fa-angle-right"></i> Estudando e se especializando
                 </p>
                 <p class="line typing-animation delay">em Programação.</p>
+
+            </div>
+            <div class="location-card">
+                <div class="location-content">
+                    <p> <i class="fa-solid fa-earth-americas"></i> RS/Encantado</p>
+                </div>
             </div>
         </div>
 
@@ -55,7 +60,6 @@
         <section class="about-section">
             <div class="container">
                 <div class="about">
-
                     <div data-aos="zoom-out" data-aos-duration="1500">
                         <div class="grid-1-2">
                             <p class="informacoes"><i class="fa-solid fa-laptop-code"></i>Procurando aprender e se
@@ -73,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <section class="portfolio-experiment">
+            <section class="portfolio-experiment" data-aos="fade-up" data-aos-duration="1000">
                 <a>
                     <span class="text">Sobre mim</span>
                     <span class="line -right"></span>
@@ -84,69 +88,92 @@
             </section>
         </section>
 
-        <section class="projetos">
+        <section class="projects-section">
             <div class="container">
-                <p class="titulo-animado">
+                <p class="titulo-animado" data-aos="fade-right" data-aos-duration="1200">
                     <span>Trabalhos recentes</span>
                 </p>
-        
+
+                <div data-aos="zoom-out" data-aos-duration="500">
+                    <p class="row"></p>
+                </div>
+
                 <div class="project-item" onmousemove="moveWithCursor(event, this)" onmouseleave="resetPosition(this)">
                     <p class="project-title">SACOLA FRETES</p>
                     <div class="project-overlay">
                         <img src="./img/capa-projeto-1.PNG" alt="Imagem do Projeto" class="project-image">
                         <a href="https://sacolafretes.netlify.app/" class="view-button">View</a>
                     </div>
-                </div>                               
-                
+                </div>
+
                 <div data-aos="zoom-out" data-aos-duration="500">
                     <p class="row"></p>
+                </div>
+
+                <div class="project-item" onmousemove="moveWithCursor(event, this)" onmouseleave="resetPosition(this)">
+                    <p class="project-title">PROJETO2</p>
+                    <div class="project-overlay">
+                        <img src="./img/capa-projeto-2.png" alt="Imagem do Projeto" class="project-image">
+                        <a href="" class="view-button">View</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-out" data-aos-duration="500">
+                    <p class="row"></p>
+                </div>
+
+                <div class="project-item" onmousemove="moveWithCursor(event, this)" onmouseleave="resetPosition(this)">
+                    <p class="project-title">PROJETO3</p>
+                    <div class="project-overlay">
+                        <img src="./img/capa-projeto-2.png" alt="Imagem do Projeto" class="project-image">
+                        <a href="" class="view-button">View</a>
+                    </div>
                 </div>
 
                 <!-- TODO: colocar mais projetos -->
 
             </div>
-        </section>        
-               
+        </section>
 
-        <section class="contact">
+
+        <section class="contact-section" data-aos="fade-up" data-aos-duration="1000">
             <div class="container">
-                <h2 class="contact-title">Fale Comigo</h2>
                 <div class="grid-1-2">
-                    <div class="contact-info">
+                    <h2 class="contact-title" data-aos="fade-right" data-aos-duration="1000">Fale Comigo</h2>
+
+                    <div class="contact-info" data-aos="fade-left" data-aos-duration="1000">
                         <i class="fa-solid fa-phone contact-icon"></i>
-                        <p class="contact-text">(51) 99599-5875
-                            (WhatsApp)
-                        </p>
+                        <p class="contact-text">(51) 99599-5875 (WhatsApp)</p>
                     </div>
-                    <div class="contact-info">
+                    <div class="contact-info" data-aos="fade-left" data-aos-duration="1000">
                         <i class="fa-regular fa-envelope contact-icon"></i>
                         <p class="contact-text">guirbagatini@gmail.com</p>
                     </div>
                 </div>
-                <div class=" grid-1-2">
-                    <h4>Entre em Contato</h4>
-                    <button class="contato">Enviar via WhatsApp</button>
+                <div class="grid-1-2" data-aos="fade-left" data-aos-duration="1000">
+                    <h4 class="entreEmContato">Entre em Contato</h4>
+                    <button class="btnContato">Enviar via WhatsApp</button>
                 </div>
             </div>
         </section>
+
     </main>
-    <!--
-    <footer>
+
+    <footer class="footer-section">
         <div class="versao">
             <h5>Versão: 1.0</h5>
         </div>
         <div class="sociais">
-            <h5>Sociais</h5>
+            <h5 class="h5Sociais">Sociais</h5>
             <ul>
-                <li><a href="#" aria-label="Instagram">Instagram</a></li>
-                <li><a href="#" aria-label="Linkedin">LinkedIn</a></li>
-                <li><a href="#" aria-label="Github">GitHub</a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a></li>
             </ul>
-        </div> -->
-    <div>
+        </div> 
         <div class="codeBy">&copy; Code by Guilherme</div>
-    </div>
     </footer>
+
     <script src="./js/coloracao.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/seguirCursor.js"></script>
