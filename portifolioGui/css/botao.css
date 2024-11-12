@@ -18,7 +18,7 @@
 
 .portfolio-experiment a .text {
     /* padding: 0 0.3em; */
-    font-family: 'Ubuntu';
+    font-family: 'Raleway';
     font-weight: bold;
     transform: translate3d(0, 0.7em, 0);
     display: block;
@@ -166,8 +166,13 @@
 
 /* Estilos para o corpo em modo escuro */
 
+.body.dark{
+    background-color: #FBF5F3;
+    color:#000000;
+}
+
 .about-section.dark {
-    background-color: #e4e4e4; /* Cor da seção 'Sobre Mim' */
+    background-color: #F2F2F2; /* Cor da seção 'Sobre Mim' */
     color: #333;
 }
 
@@ -176,8 +181,13 @@
     color: #000000;
 }
 
+.experiences-section.dark {
+    background-color: #aaaaaa; /* Cor da seção 'experiencias' */
+    color: #000000;
+}
+
 .contact-section.dark {
-    background-color: #e4e4e4; /* Cor da seção 'Projetos' */
+    background-color: #F2F2F2; /* Cor da seção 'Contato' */
     color: #000000;
 }
 

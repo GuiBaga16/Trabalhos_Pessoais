@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     overflow-x: hidden;
@@ -10,19 +9,25 @@ body {
 }
 
 .about-section {
-    background-color: #333;
+    background-color: #292F36;
     /*'Sobre Mim' em modo escuro */
     color: #fff;
 }
 
 .projects-section {
-    background-color: #333;
+    background-color: #292F36;
+    /*'Projetos' em modo escuro */
+    color: #f0f0f0;
+}
+
+.experiences-section {
+    background-color: #222;
     /*'Projetos' em modo escuro */
     color: #f0f0f0;
 }
 
 .contact-section {
-    background-color: #333;
+    background-color: #292F36;
     /*'Projetos' em modo escuro */
     color: #f1f1f1;
 }
@@ -38,7 +43,7 @@ body {
 .top {
     position: relative;
     height: 100vh;
-    background: linear-gradient(135deg, #555555, #333333);
+    background: linear-gradient(135deg, #2B303A, #4C5B5C);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,11 +58,11 @@ h1 {
     white-space: nowrap;
     display: inline-block;
     text-align: center;
+    font-weight: bold;
     position: absolute;
     bottom: 20px;
     z-index: 2;
 }
-
 
 .imgPessoa {
     position: absolute;
@@ -75,14 +80,14 @@ h1 {
     position: fixed;
     top: 0;
     z-index: 10;
-    background-color: #1f1f1f;
+    background-color: #121619;
     border-bottom: 2px solid #F77309;
 }
 
 /* Ocultar a navegação inicialmente */
 .nav-links {
     position: fixed;
-    top: -1000%;
+    top: -2000%;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -113,7 +118,7 @@ h1 {
     color: white;
     text-decoration: none;
     font-size: 35px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Estilizar o ícone de hambúrguer */
@@ -237,7 +242,7 @@ h1 {
     text-align: right;
     right: 0px;
     top: 300px;
-    background-color: #0f0f0fd5;
+    background-color: #121619;
     color: white;
     padding: 20px 25px;
     border-radius: 60px 0px 0px 60px;
@@ -260,7 +265,7 @@ h1 {
 
 .location-card i {
     font-size: 25px;
-    color: #333;
+    color: #121619;
     margin-right: 20px;
 }
 
@@ -300,8 +305,7 @@ h1 {
     margin-bottom: 0px;
     justify-content: space-between;
     line-height: 1.2;
-    font-family: 'Work Sans';
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Raleway';
 }
 
 .informacoes i {
@@ -317,8 +321,7 @@ h1 {
 .informacoes2 {
     font-size: 20px;
     padding-right: 60px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #6b6b6b;
+    border-bottom: 1px solid #736B60;
 }
 
 .about {
@@ -383,12 +386,12 @@ h1 {
 
 .projects-section {
     text-align: center;
-    padding: 100px 0 100px 0;
+    padding: 50px 0 100px 0;
 }
 
 .projects-section .project-item {
     position: relative;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     cursor: pointer;
 }
 
@@ -399,7 +402,7 @@ h1 {
 
 .project-title {
     font-size: 25px;
-    font-family: 'Work Sans';
+    font-family: 'Raleway';
     z-index: 2;
 }
 
@@ -454,9 +457,88 @@ h1 {
 .row {
     height: 1px;
     width: 100%;
-    background-color: #6b6b6b;
+    background-color: #736B60;
     margin: 10px auto;
 }
+
+/*! Experiencias section !*/
+
+.experiences-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.experiences-section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    font-family: 'Raleway';
+}
+
+.experiences-section h2::after {
+    content: '.';
+    color: #F77309;
+    font-weight: bold;
+}
+
+#description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #d1d1d1;
+    text-align: left;
+    font-family: 'Montserrat';
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.experiences-section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, .01fr);
+    /* 4 colunas */
+    flex-direction: line;
+    justify-content: end;
+    gap: 15px;
+}
+
+.experiences-section li {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #d1d1d1;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Adicionei isso para permitir o uso do z-index */
+}
+
+.experiences-section li:hover {
+    background-color: #272727;
+    transform: translateY(-5px);
+    /* Só o item específico é afetado */
+    z-index: 10;
+    /* Garante que o item hover fique acima dos outros */
+}
+
+.experiences-section li i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.experiences-section li:hover i {
+    color: #F77309;
+    /* Cor do ícone alterada ao passar o mouse */
+}
+
 
 
 /*! Section Contato !*/
@@ -485,7 +567,7 @@ h1 {
 
 
 .contact-title {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: bold;
     margin: 0 0 30px;
@@ -504,12 +586,12 @@ h1 {
 }
 
 .contact-text {
-    font-family: 'Montserrat';
+    font-family: 'Raleway';
     font-size: 18px;
 }
 
 .entreEmContato {
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -523,7 +605,7 @@ h1 {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s, transform 0.3s;
-    font-family: 'Montserrat';
+    font-family: 'Raleway';
 }
 
 .btnContato:hover {
@@ -539,9 +621,9 @@ h1 {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background-color: #141414;
+    background-color: #121619;
     color: #f0f0f0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .sociais {
