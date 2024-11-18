@@ -2,15 +2,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+*,
+*:before,
+*:after {
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
 body {
     overflow-x: hidden;
     background-color: #222;
     color: #fff;
 }
 
+main{
+    padding-bottom: 20px;
+}
+
+/*! Scroll !*/
+
+/* Estilo para o container principal */
+body {
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: #F77309 #222; /* Para Firefox */
+}
+
+/* Barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #222; /* Cor de fundo do track */
+}
+
+/* Cor do polegar (thumb) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #F77309; /* Cor do thumb */
+    border-radius: 8px; /* Arredonda o thumb */
+    border: 2px solid #222; /* Espaço entre o thumb e o track */
+}
+
+/* Estilo para o hover no polegar */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #cf5f03; /* Cor ao passar o mouse */
+}
+/*! ---------- !*/
+
 .about-section {
     background-color: #292F36;
     /*'Sobre Mim' em modo escuro */
+    color: #fff;
+}
+
+.portfolio-experiment a{
     color: #fff;
 }
 
@@ -22,7 +67,6 @@ body {
 
 .experiences-section {
     background-color: #222;
-    /*'Projetos' em modo escuro */
     color: #f0f0f0;
 }
 
@@ -32,11 +76,7 @@ body {
     color: #f1f1f1;
 }
 
-*,
-*:before,
-*:after {
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-}
+
 
 /** Header **/
 
@@ -51,7 +91,7 @@ body {
     /* Centraliza na horizontal */
 }
 
-h1 {
+titulo {
     font-family: 'Montserrat';
     color: white;
     font-size: 120px;
@@ -327,6 +367,7 @@ h1 {
 .about {
     display: flex;
     gap: 100px;
+    padding: auto;
 }
 
 /*? section Projetos !*/
@@ -487,10 +528,8 @@ h1 {
 #description {
     margin-top: 20px;
     font-size: 16px;
-    color: #d1d1d1;
     text-align: left;
     font-family: 'Montserrat';
-    opacity: 0;
     transition: opacity 0.3s;
 }
 

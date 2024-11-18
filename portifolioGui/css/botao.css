@@ -14,7 +14,9 @@
     position: relative;
     font-size: 1.5em;
     cursor: pointer;
+    text-decoration: none; /* Remove a decoração padrão */
 }
+
 
 .portfolio-experiment a .text {
     /* padding: 0 0.3em; */
@@ -176,6 +178,10 @@
     color: #333;
 }
 
+.portfolio-experiment.dark .btnSobre{
+    color: #000000;
+}
+
 .projects-section.dark {
     background-color: #aaaaaa; /* Cor da seção 'Projetos' */
     color: #000000;
@@ -184,6 +190,11 @@
 .experiences-section.dark {
     background-color: #aaaaaa; /* Cor da seção 'experiencias' */
     color: #000000;
+
+    description{
+        color: #000000;
+
+    }
 }
 
 .contact-section.dark {
