@@ -502,6 +502,29 @@ titulo {
     margin: 10px auto;
 }
 
+.lugarBtn{
+    margin-top: 80px;
+}
+
+.btnMais {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 20px;
+    background-color: #F77309;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Raleway';
+}
+
+.btnMais:hover {
+    background-color: #cf5f03;
+    transform: scale(1.05);
+}
+
 /*! Experiencias section !*/
 
 .experiences-section {
