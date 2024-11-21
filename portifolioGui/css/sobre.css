@@ -160,7 +160,7 @@ body {
     font-weight: bold;
     position: absolute;
     top: 45px;
-    left: 50%;
+    left: 46%;
     transform: translateX(-50%);
     white-space: nowrap;
     letter-spacing: 3px;
@@ -210,7 +210,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: #121619;
-    font-size: 110px;
+    font-size: 100px;
     font-weight: bold;
     position: relative;
     line-height: 1.2;
@@ -226,7 +226,7 @@ body {
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    top: 35px;
+    top: 32px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -236,7 +236,7 @@ body {
 .titulo-trabalho::before {
     content: '';
     position: absolute;
-    top: 90px;
+    top: 85px;
     left: 50%;
     transform: translateX(-50%);
     width: 70px;
@@ -355,13 +355,15 @@ body {
 }
 
 .card-formacao p {
-    font-size: 16px;
+    font-family: 'Montserrat';
+    font-size: 14px;
     color: #858585;
     margin-bottom: 8px;
 }
 
 .card-formacao span {
-    font-size: 14px;
+    font-family: 'montserrat';
+    font-size: 13px;
     color: #999;
 }
 

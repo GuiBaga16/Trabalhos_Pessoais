@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-*,
-*:before,
-*:after {
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');   
 
 body {
     overflow-x: hidden;
@@ -50,7 +44,7 @@ body {
 /*! ---------- !*/
 
 .about-section {
-    background-color: #292F36;
+    background-color: #222;
     /*'Sobre Mim' em modo escuro */
     color: #fff;
 }
@@ -60,7 +54,7 @@ body {
 }
 
 .projects-section {
-    background-color: #292F36;
+    background-color: #222;
     /*'Projetos' em modo escuro */
     color: #f0f0f0;
 }
@@ -91,7 +85,7 @@ body {
     /* Centraliza na horizontal */
 }
 
-titulo {
+.titulo {
     font-family: 'Montserrat';
     color: white;
     font-size: 120px;
@@ -199,133 +193,130 @@ titulo {
 
 /** breve descrição **/
 
+/* Geral */
 .descricao {
-    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    padding: 20px 50px;
+    gap: 30px;
 }
 
+.alinhamento-descricao {
+    position: absolute; 
+    left: 80px; 
+    max-width: 600px; 
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Linha com animação de digitação */
 .line {
+    font-family: 'Source code pro';
     border-right: 2px solid #F77309;
     color: #bbbbbb;
-    font-family: 'Source Code Pro';
     font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
 }
 
-/* Animação para a primeira linha */
+/* Animações das linhas */
 .typing-animation {
-    animation: typing 3s steps(40) 1s normal both,
-        blinkCursorEnd 4s steps(40) normal both;
+    animation: typing 3s steps(40) 1s normal both, blinkCursorEnd 4s steps(40) normal both;
 }
 
-/* Segunda linha com delay */
 .typing-animation.delay {
-    animation: typing2 2s steps(20) 1s normal both,
-        blinkCursor 500ms infinite;
+    animation: typing2 2s steps(20) 1s normal both, blinkCursor 500ms infinite;
     animation-delay: 4s;
-    border-right: 2px solid transparent;
-    /* Cursor invisível no início */
+    border-right: 2px solid transparent; /* Cursor invisível no início */
 }
 
-/* Animação de digitação para a primeira linha */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 19em;
-    }
-}
-
-/* Animação de digitação para a segunda linha */
-@keyframes typing2 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 9em;
-    }
-}
-
-/* Para sumir o cursor ao final da primeira linha */
-@keyframes blinkCursorEnd {
-
-    0%,
-    90% {
-        border-right-color: #F77309;
-    }
-
-    100% {
-        border-right-color: transparent;
-    }
-}
-
-/* Animação do cursor com início com delay */
-@keyframes blinkCursor {
-
-    0%,
-    50% {
-        border-right-color: transparent;
-    }
-
-    51%,
-    100% {
-        border-right-color: #F77309;
-    }
-}
-
-/* Estilização do card de localização */
+/* Card de localização */
 .location-card {
-    position: absolute;
-    text-align: right;
-    right: 0px;
-    top: 300px;
+    position: absolute; /* Posicionamento no lado direito */
+    top: 50%; /* Centraliza verticalmente em relação à altura da seção */
+    right: 0px; /* Alinhado à borda direita com espaçamento */
+    transform: translateY(-50%); /* Ajusta o alinhamento central */
     background-color: #121619;
     color: white;
-    padding: 20px 25px;
-    border-radius: 60px 0px 0px 60px;
-    gap: 10px;
+    padding: 15px 20px;
+    border-radius: 60px 0 0 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.location-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .location-content i {
     font-size: 1.5rem;
-    color: white;
+    color: #121619;
     background-color: #e4e4e4;
-    padding: 15px;
+    padding: 10px;
     border-radius: 50%;
     animation: swing 1.5s ease-in-out infinite;
 }
 
 .location-content p {
-    font-size: 20px;
+    font-size: 18px;
+    color: #e4e4e4;
 }
 
-.location-card i {
-    font-size: 25px;
-    color: #121619;
-    margin-right: 20px;
+/* Animações */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 19em;
+    }
+}
+
+@keyframes typing2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 9em;
+    }
+}
+
+@keyframes blinkCursorEnd {
+    0%, 90% {
+        border-right-color: #F77309;
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes blinkCursor {
+    0%, 50% {
+        border-right-color: transparent;
+    }
+    51%, 100% {
+        border-right-color: #F77309;
+    }
 }
 
 @keyframes swing {
     0% {
         transform: rotate(0deg);
     }
-
     25% {
         transform: rotate(10deg);
     }
-
     50% {
         transform: rotate(-10deg);
     }
-
     75% {
         transform: rotate(10deg);
     }
-
     100% {
         transform: rotate(0deg);
     }
@@ -341,32 +332,34 @@ titulo {
 .informacoes,
 .informacoes2 {
     display: flex;
-    padding: 50px 0px 0px 0px;
-    margin-bottom: 0px;
     justify-content: space-between;
-    line-height: 1.2;
+    line-height: 1.4;
+    padding: 15px 30px;
     font-family: 'Raleway';
+    margin-top: 50px;
+    background-color:#121619;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .informacoes i {
     padding-right: 10px;
     color: #F77309;
-
 }
 
-.informacoes {
-    font-size: 28px;
+.informacoes{
+    font-size: 25px;    
 }
 
-.informacoes2 {
-    font-size: 20px;
-    padding-right: 60px;
-    border-bottom: 1px solid #736B60;
+.informacoes2{
+    font-size: 22px;
 }
 
 .about {
     display: flex;
-    gap: 100px;
+    gap: 0px;
     padding: auto;
 }
 
@@ -384,7 +377,7 @@ titulo {
 
     span {
 
-        font: 20px "Montserrat";
+        font: 28px "Montserrat";
         font-weight: bold;
         letter-spacing: 0;
         padding: .25em 0 .325em;
@@ -438,6 +431,7 @@ titulo {
 
 .project-item {
     padding: 40px;
+    margin-bottom: 20px; 
     position: relative;
 }
 
@@ -514,7 +508,7 @@ titulo {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
     font-family: 'Raleway';
@@ -523,6 +517,7 @@ titulo {
 .btnMais:hover {
     background-color: #cf5f03;
     transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*! Experiencias section !*/
@@ -567,7 +562,7 @@ titulo {
 }
 
 .experiences-section li {
-    background-color: #1e1e1e;
+    background-color: #121619;
     padding: 30px;
     border-radius: 8px;
     font-size: 15px;
@@ -606,18 +601,18 @@ titulo {
 /*! Section Contato !*/
 
 .contact-section {
+    text-align: center;
+    background-color: #121619;
     padding: 50px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Alinha o conteúdo no centro horizontalmente */
-    border-top: 3px solid #F77309;
     border-radius: 50px;
-    margin: 50px auto;
-    /* Centraliza horizontalmente */
-    max-width: 800px;
-    /* Define uma largura máxima */
+    margin: 50px auto; 
+    max-width: 800px; 
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5); 
 }
+
 
 .contact-section .container {
     display: flex;
@@ -644,12 +639,12 @@ titulo {
 .contact-icon {
     font-size: 25px;
     color: #F77309;
-    margin-right: 15px;
 }
 
 .contact-text {
     font-family: 'Raleway';
     font-size: 18px;
+    padding-left: 30px;
 }
 
 .entreEmContato {
