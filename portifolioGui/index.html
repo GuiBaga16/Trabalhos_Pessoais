@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/grid.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/Telas/styles.css" />
     <link rel="stylesheet" href="./css/responsivo.css" />
     <link rel="stylesheet" href="./css/botao.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -22,7 +22,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobreTela.html">Sobre</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
@@ -32,12 +32,7 @@
                 <span></span>
                 <span></span>
             </div>
-
-            <div id="trilho" class="trilho" onclick="toggleDarkMode()">
-                <div class="indicador"></div>
-            </div>
         </div>
-
         <div class="descricao">
             <div class="alinhamento-descricao">
                 <p class="line typing-animation">
@@ -66,32 +61,32 @@
                 <div class="about">
                     <div data-aos="zoom-out" data-aos-duration="1500">
                         <div class="grid-1-2">
-                            <p class="informacoes"><i class="fa-solid fa-laptop-code"></i>Eae! Eu sou o Gui mas pode me
-                                chamar de Baga,
-                                atualmente procurando aprender e se
-                                desenvolver na área de programação, estou
-                                estudando e fazendo alguns projetos.</p>
+                            <p class="informacoes"><i class="fa-solid fa-laptop-code"></i>Eae! Eu sou o Gui, mas pode
+                                ser Baga também.
+                                No momento, estou em constante evolução e aprendizado no campo da programação,
+                                desenvolvendo e explorando novos projetos.</p>
                         </div>
                     </div>
 
                     <div data-aos="zoom-out" data-aos-duration="1500">
                         <div class="grid-1-2">
-                            <p class="informacoes2">Aqui vou motrar alguns projetos que tive o prazer de fazer, se
-                                precisar
-                                de mais informações basta clicar no botão.</p>
+                            <p class="informacoes2">Neste portfólio, vou apresentar alguns projetos que realizei com
+                                prazer.
+                                Caso queira saber mais sobre mim, basta clicar no botão abaixo.</p>
                         </div>
                     </div>
                 </div>
+
+                <section class="portfolio-experiment" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="sobreTela.html" class="btnSobre">
+                        <span class="text">Sobre mim</span>
+                        <span class="line -right"></span>
+                        <span class="line -top"></span>
+                        <span class="line -left"></span>
+                        <span class="line -bottom"></span>
+                    </a>
+                </section>
             </div>
-            <section class="portfolio-experiment" data-aos="fade-up" data-aos-duration="1000">
-                <a href="sobreTela.html" class="btnSobre">
-                    <span class="text">Sobre mim</span>
-                    <span class="line -right"></span>
-                    <span class="line -top"></span>
-                    <span class="line -left"></span>
-                    <span class="line -bottom"></span>
-                </a>
-            </section>
         </section>
 
         <section class="projects-section">
@@ -116,7 +111,7 @@
                     <p class="row"></p>
                 </div>
 
-                <div class="project-item" onmousemove="moveWithCursor(event, this)" onmouseleave="resetPosition(this)">
+                <!-- <div class="project-item" onmousemove="moveWithCursor(event, this)" onmouseleave="resetPosition(this)">
                     <p class="project-title">PROJETO2</p>
                     <div class="project-overlay">
                         <img src="./img/capa-projeto-2.png" alt="Imagem do Projeto" class="project-image">
@@ -134,7 +129,7 @@
                         <img src="./img/capa-projeto-2.png" alt="Imagem do Projeto" class="project-image">
                         <a href="" class="view-button">View</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="lugarBtn">
                     <a href="projetos.html" class="btnMais">Mais Projetos</a>
                 </div>
@@ -203,7 +198,6 @@
         <div class="codeBy">&copy; Code by Guilherme</div>
     </footer>
 
-    <script src="./js/coloracao.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/seguirCursor.js"></script>
     <script src="./js/descricao.js"></script>

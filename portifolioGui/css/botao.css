@@ -1,8 +1,7 @@
 /** Button sobre mim **/
 
 .portfolio-experiment {
-    margin-left: auto; 
-    margin-right: 300px; 
+    margin-left: 750px;
     margin-bottom: 100px;
 }
 
@@ -14,11 +13,13 @@
     position: relative;
     font-size: 1.5em;
     cursor: pointer;
-    text-decoration: none; /* Remove a decoração padrão */
+    text-decoration: none;
+    /* Remove a decoração padrão */
 }
 
 
 .portfolio-experiment a .text {
+    color: #fff;    
     /* padding: 0 0.3em; */
     font-family: 'Raleway';
     font-weight: bold;
@@ -35,7 +36,7 @@
     right: calc(0.7em * 1.2);
     height: 3px;
     background: #F77309;
-    transition: 
+    transition:
         transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s,
         right 0.2s cubic-bezier(.04, .48, 0, 1) 0.6s,
         left 0.4s cubic-bezier(.04, .48, 0, 1) 0.6s;
@@ -87,10 +88,10 @@
     transform-origin: right;
 }
 
-.portfolio-experiment a:hover,
+/* .portfolio-experiment a:hover,
 .portfolio-experiment a:active {
-    /* Regras para hover/active */
-}
+    /* Regras para hover/active 
+} */
 
 .portfolio-experiment a:hover .text {
     transform: translate3d(0, 0, 0);
@@ -102,7 +103,7 @@
     right: -3px;
     left: -3px;
     transform-origin: right;
-    transition: 
+    transition:
         transform 0.2s cubic-bezier(1, 0, .65, 1.01) 0.17s,
         right 0.2s cubic-bezier(1, 0, .65, 1.01),
         left 0s 0.3s;
@@ -131,5 +132,3 @@
     transition: transform 0.5s cubic-bezier(0, .53, .29, 1) 0.56s;
     transform-origin: left;
 }
-
-  
