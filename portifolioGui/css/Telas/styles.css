@@ -5,7 +5,8 @@
 /** estiliazções gerais **/
 
 body {
-    overflow-x: hidden; /*Impede barras horizontais no eixo x*/
+    overflow-x: hidden;
+    /*Impede barras horizontais no eixo x*/
     background-color: #222;
     color: #fff;
 }
@@ -19,7 +20,7 @@ main {
 /* Estilo para o container principal */
 body {
     scrollbar-width: thin;
-    scrollbar-color: #F77309 #222;
+    scrollbar-color: #FF2E00 #222;
 }
 
 /* Barra de rolagem */
@@ -32,13 +33,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #F77309;
+    background-color: #b32100;
     border-radius: 8px;
     border: 2px solid #222;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #cf5f03;
+    background-color: #b32100;
 }
 
 /*! ---------- !*/
@@ -77,31 +78,40 @@ body {
 }
 
 /** Menu básico **/
+:root {
+    --primary-color: #FF2E00;
+    --background-color: #121619;
+    --menu-overlay: rgba(0, 0, 0, 0.842);
+    --text-color: white;
+    --font-family: 'Montserrat', sans-serif;
+    --hamburger-size: 30px;
+}
+
 .navbar {
     width: 100%;
-    padding: 15px 30px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 10;
-    background-color: #121619;
-    border-bottom: 2px solid #F77309;
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 /* Ocultar a navegação inicialmente */
 .nav-links {
     position: fixed;
-    top: -2000%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color: var(--menu-overlay);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: top 0.5s ease-in-out;
-    /* Transição suave */
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
     z-index: 9;
 }
 
@@ -120,10 +130,10 @@ body {
 
 /* Estilo dos links */
 .nav-links ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 35px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family);
 }
 
 /* Estilizar o ícone de hambúrguer */
@@ -138,9 +148,9 @@ body {
 
 /* Estilo das barras do hambúrguer */
 .hamburger span {
-    width: 30px;
+    width: var(--hamburger-size);
     height: 3px;
-    background-color: white;
+    background-color: var(--text-color);
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -159,8 +169,9 @@ body {
 
 /* Quando o menu de navegação está ativo */
 .nav-links.active {
-    top: 0;
+    transform: translateY(0);
 }
+
 
 /** breve descrição **/
 
@@ -183,7 +194,7 @@ body {
 /* Linha com animação de digitação */
 .line {
     font-family: 'Source code pro';
-    border-right: 2px solid #F77309;
+    border-right: 2px solid #FF2E00;
     color: #bbbbbb;
     font-size: 20px;
     white-space: nowrap;
@@ -268,7 +279,7 @@ body {
 
     0%,
     90% {
-        border-right-color: #F77309;
+        border-right-color: #FF2E00;
     }
 
     100% {
@@ -285,7 +296,7 @@ body {
 
     51%,
     100% {
-        border-right-color: #F77309;
+        border-right-color: #FF2E00;
     }
 }
 
@@ -335,7 +346,7 @@ body {
 
 .informacoes i {
     padding-right: 10px;
-    color: #F77309;
+    color: #FF2E00;
 }
 
 .informacoes {
@@ -354,47 +365,36 @@ body {
 
 /** section Projetos **/
 
-/*! Este título foi adptado de Daniel Riemer !*/
+/*! Este título foi adaptado de Daniel Riemer !*/
 .titulo-animado {
     text-transform: uppercase;
     letter-spacing: .5em;
     display: inline-block;
-    padding: 1.5em 0em;
+    padding: 1.5em 0;
     position: relative;
-    width: 30em;
-    border: 1px #141414;
+    width: fit-content;
+    margin: 0 auto;
 
     span {
-
         font: 28px "Montserrat";
         font-weight: bold;
         letter-spacing: 0;
         padding: .25em 0 .325em;
         display: block;
-        margin: 0 auto;
-        /* -webkit-text-stroke: 1px #1f1f1f; */
-
-        /* Clip Background Image */
 
         background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
         -webkit-background-clip: text;
         background-clip: text;
-
-        /* Animate Background Image */
-
         -webkit-text-fill-color: transparent;
         -webkit-animation: aitf 80s linear infinite;
 
-        /* Activate hardware acceleration for smoother animations */
-
+        /* Ativando aceleração por hardware */
         -webkit-transform: translate3d(0, 0, 0);
         -webkit-backface-visibility: hidden;
-
     }
 }
 
-/* Animate Background Image */
-
+/* Animação do título */
 @-webkit-keyframes aitf {
     0% {
         background-position: 0% 50%;
@@ -409,25 +409,23 @@ body {
 
 .projects-section {
     text-align: center;
-    padding: 50px 0 100px 0;
-}
-
-.projects-section .project-item {
-    position: relative;
-    font-family: 'Raleway', sans-serif;
-    cursor: pointer;
+    padding: 50px 0 100px;
 }
 
 .project-item {
-    padding: 40px;
-    margin-bottom: 20px;
     position: relative;
+    font-family: 'Raleway', sans-serif;
+    padding: 80px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .project-title {
     font-size: 25px;
+    font-weight: bold;
     font-family: 'Raleway';
     z-index: 2;
+    position: relative;
 }
 
 .project-overlay {
@@ -436,53 +434,65 @@ body {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    will-change: opacity;
 }
 
 .project-item:hover .project-overlay {
     opacity: 1;
 }
 
-.project-overlay img {
-    z-index: 2;
-    object-fit: cover;
-    position: absolute;
-    max-width: 300px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    transition: transform 0.5s ease;
-}
-
+.project-image,
 .view-button {
     position: absolute;
-    background-color: #F77309;
-    width: 60px;
-    height: 60px;
-    text-decoration: none;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bold;
-    transition: transform 1s linear;
-    z-index: 3;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    will-change: transform, top, left;
+    transition: transform 0.3s ease;
+}
+
+.project-image {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 
-.view-button:hover {
-    transform: scale(1.1);
+.view-button {
+    position: relative;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    z-index: 2; 
+    cursor: pointer;
+    width: 60px; 
+    height: 60px; 
+    background-color: #FF2E00; 
+    color: #fff; 
+    font-size: 16px;
+    font-weight: bold; 
+    border-radius: 50%; 
+    text-align: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.view-button::before {
+    content: '';
+    position: absolute;
+    top: -10px; 
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .row {
     height: 1px;
     width: 100%;
-    background-color: #736B60;
-    margin: 10px auto;
+    background-color: #121619;
 }
 
 .lugarBtn {
@@ -493,7 +503,7 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 12px 20px;
-    background-color: #F77309;
+    background-color: #FF2E00;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -504,10 +514,11 @@ body {
 }
 
 .btnMais:hover {
-    background-color: #cf5f03;
+    background-color: #b32100;
     transform: scale(1.05);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 /** Experiencias section **/
 
@@ -528,7 +539,7 @@ body {
 
 .experiences-section h2::after {
     content: '.';
-    color: #F77309;
+    color: #FF2E00;
     font-weight: bold;
 }
 
@@ -577,7 +588,7 @@ body {
 }
 
 .experiences-section li:hover i {
-    color: #F77309;
+    color: #FF2E00;
 }
 
 
@@ -621,7 +632,7 @@ body {
 
 .contact-icon {
     font-size: 25px;
-    color: #F77309;
+    color: #FF2E00;
 }
 
 .contact-text {
@@ -642,7 +653,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     color: #fff;
-    background-color: #F77309;
+    background-color: #FF2E00;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -652,7 +663,7 @@ body {
 }
 
 .btnContato:hover {
-    background-color: #cf5f03;
+    background-color: #b32100;
     transform: scale(1.05);
 }
 
@@ -707,7 +718,7 @@ body {
 }
 
 .sociais a:hover {
-    color: #f77309;
+    color: #FF2E00;
     box-shadow: 0 4px 12px rgba(255, 119, 9, 0.3);
     transform: scale(1.15);
 }

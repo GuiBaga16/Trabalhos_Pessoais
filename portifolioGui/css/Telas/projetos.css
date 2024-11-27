@@ -40,31 +40,40 @@ body {
 /*! ---------- !*/
 
 /** Menu básico **/
+:root {
+    --primary-color: #1D70A2;
+    --background-color: #121619;
+    --menu-overlay: rgba(0, 0, 0, 0.842);
+    --text-color: white;
+    --font-family: 'Montserrat', sans-serif;
+    --hamburger-size: 30px;
+}
+
 .navbar {
     width: 100%;
-    padding: 15px 30px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 10;
-    background-color: #121619;
-    border-bottom: 2px solid #1D70A2;
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 /* Ocultar a navegação inicialmente */
 .nav-links {
     position: fixed;
-    top: -2000%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color: var(--menu-overlay);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: top 0.5s ease-in-out;
-    /* Transição suave */
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
     z-index: 9;
 }
 
@@ -83,10 +92,10 @@ body {
 
 /* Estilo dos links */
 .nav-links ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 35px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family);
 }
 
 /* Estilizar o ícone de hambúrguer */
@@ -101,9 +110,9 @@ body {
 
 /* Estilo das barras do hambúrguer */
 .hamburger span {
-    width: 30px;
+    width: var(--hamburger-size);
     height: 3px;
-    background-color: white;
+    background-color: var(--text-color);
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -122,8 +131,9 @@ body {
 
 /* Quando o menu de navegação está ativo */
 .nav-links.active {
-    top: 0;
+    transform: translateY(0);
 }
+
 
 /*TODO: Conteudo */
 
@@ -203,7 +213,7 @@ body {
     font-size: 24px;
     color: #1D70A2;
     text-transform: uppercase;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     word-wrap: break-word; 
 }
 
@@ -222,19 +232,19 @@ body {
 
 #project-details ul {
     list-style: none;
-    padding: 0;
+    padding-top: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     justify-content: center;
-    opacity: 0; /* Invisível inicialmente */
+    opacity: 0; /* Invisível inicialmente */    
     transform: translateY(-10px); /* Levemente acima */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Animação suave */
 }
 
 #project-details.show ul {
-    opacity: 1; /* Visível */
-    transform: translateY(0); /* Volta à posição original */
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 
@@ -247,7 +257,25 @@ body {
 
 #project-details i {
     color: #1D70A2; 
-    font-size: 18px; 
+    font-size: 23px; 
+}
+
+#project-details i:hover{
+    color: #12496b;
+}
+
+.linkArryProjeto{
+    color:#fff;
+    text-decoration: none;
+    background-color: #1D70A2;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.linkArryProjeto:hover{
+    background-color: #12496b;
+    transform: scale(1.05);
 }
 
 .project:hover {

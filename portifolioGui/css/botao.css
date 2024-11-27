@@ -35,7 +35,7 @@
     left: calc(0.7em * 1.2);
     right: calc(0.7em * 1.2);
     height: 3px;
-    background: #F77309;
+    background: #FF2E00;
     transition:
         transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s,
         right 0.2s cubic-bezier(.04, .48, 0, 1) 0.6s,
@@ -45,7 +45,7 @@
 
 .portfolio-experiment .line {
     position: absolute;
-    background: #F77309;
+    background: #FF2E00;
 }
 
 .portfolio-experiment .line.-right,

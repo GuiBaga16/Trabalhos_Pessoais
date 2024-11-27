@@ -21,24 +21,8 @@ function moveWithCursor(event, projectItem) {
         viewButton.style.top = `${y}px`;
         viewButton.style.transition = 'left 0.2s ease, top 0.2s ease'; // Transição suave para o botão
         viewButton.style.transform = 'translate(-50%, -50%)';
-        viewButton.style.position = 'absolute'; 
-    });
-
-    const limitedX = Math.min(Math.max(x, buttonWidth / 2), rect.width - buttonWidth / 2);
-    const limitedY = Math.min(Math.max(y, buttonHeight / 2), rect.height - buttonHeight / 2);
-
-    // Atualiza a posição da imagem para seguir o cursor dentro dos limites
-    projectImage.style.left = `${limitedX}px`;
-    projectImage.style.top = `${limitedY}px`;
-    projectImage.style.transform = 'translate(-50%, -50%)';
-    projectImage.style.position = 'absolute';
-
-    // Posiciona a view-button no centro do cursor dentro dos limites
-    viewButton.style.left = `${limitedX}px`;
-    viewButton.style.top = `${limitedY}px`;
-    viewButton.style.transform = 'translate(-50%, -50%)';
-    viewButton.style.position = 'absolute'; 
-
+        viewButton.style.position = 'absolute';
+    },);
 }
 
 function resetPosition(projectItem) {

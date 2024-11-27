@@ -1,25 +1,27 @@
 // Estrutura de dados para armazenar as ferramentas dos projetos
 const projectTools = {
   "Sacola Fretes": [
+    { icon: "fa-solid fa-screwdriver-wrench", name: "Ferramentas usadas:" },
     { icon: "fa-brands fa-html5", name: "HTML" },
     { icon: "fa-brands fa-css3-alt", name: "CSS" },
     { icon: "fa-brands fa-js", name: "JavaScript" },
-    { icon: "fa-brands fa-whatsapp", name: "Integração com API do WhatsApp" },
-    { icon: "fa-solid fa-truck", name: "Ferramentas usadas no Sacola Fretes" }
+    { icon: "fa-brands fa-whatsapp", name: "API do WhatsApp" },
+    { class:"linkArryProjeto", name: "Clique aqui para ver o site!!", link: "https://sacolafretes.netlify.app"}
   ],
   "Projeto 2": [
+    { icon: "fa-solid fa-screwdriver-wrench", name: "Ferramentas usadas:" },
     { icon: "", name: "" },
     { icon: "", name: "" },
-    { icon: "", name: "" },
-    { icon: "fa-solid fa-cogs", name: "Ferramentas usadas no Projeto 2" }
+    { icon: "", name: "" }
+    
   ],
   "Projeto 3": [
+    { icon: "fa-solid fa-screwdriver-wrench", name: "Ferramentas usadas:" },
     { icon: "", name: "" },
     { icon: "", name: "" },
-    { icon: "", name: "" },
-    { icon: "fa-solid fa-cogs", name: "Ferramentas usadas no Projeto 3" }
+    { icon: "", name: "" }
+    
   ]
-
 };
 
 // Função para destacar o nome do projeto selecionado e exibir as ferramentas
@@ -36,9 +38,21 @@ function highlightProject(name) {
 
     // Iterar sobre as ferramentas do projeto e adicionar ao HTML
     projectTools[name].forEach(tool => {
-      toolsHtml += `
-        <li><i class="${tool.icon}"></i> ${tool.name}</li>
-      `;
+      if (tool.link) {
+        toolsHtml += `
+          <li>
+            <a href="${tool.link}" target="_blank" class="${tool.class || ''}">
+              ${tool.name}
+            </a>
+          </li>
+        `;
+      } else {
+        toolsHtml += `
+          <li>
+            <i class="${tool.icon || ''}"></i> ${tool.name}
+          </li>
+        `;
+      }
     });
 
     toolsHtml += "</ul>";

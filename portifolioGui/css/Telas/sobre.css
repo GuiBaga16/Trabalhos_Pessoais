@@ -47,31 +47,40 @@ body {
 }
 
 /** Menu básico **/
+:root {
+    --primary-color: #306B34;
+    --background-color: #121619;
+    --menu-overlay: rgba(0, 0, 0, 0.842);
+    --text-color: white;
+    --font-family: 'Montserrat', sans-serif;
+    --hamburger-size: 30px;
+}
+
 .navbar {
     width: 100%;
-    padding: 15px 30px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 10;
-    background-color: #121619;
-    border-bottom: 2px solid #306B34;
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 /* Ocultar a navegação inicialmente */
 .nav-links {
     position: fixed;
-    top: -2000%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color: var(--menu-overlay);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: top 0.5s ease-in-out;
-    /* Transição suave */
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
     z-index: 9;
 }
 
@@ -90,10 +99,10 @@ body {
 
 /* Estilo dos links */
 .nav-links ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 35px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family);
 }
 
 /* Estilizar o ícone de hambúrguer */
@@ -108,9 +117,9 @@ body {
 
 /* Estilo das barras do hambúrguer */
 .hamburger span {
-    width: 30px;
+    width: var(--hamburger-size);
     height: 3px;
-    background-color: white;
+    background-color: var(--text-color);
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -129,8 +138,9 @@ body {
 
 /* Quando o menu de navegação está ativo */
 .nav-links.active {
-    top: 0;
+    transform: translateY(0);
 }
+
 
 /*TODO Contedo */
 
@@ -170,7 +180,7 @@ body {
     content: '';
     position: absolute;
     top: 100px;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     width: 70px;
     height: 3px;
