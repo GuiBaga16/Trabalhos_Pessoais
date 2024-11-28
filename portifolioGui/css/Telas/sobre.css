@@ -378,6 +378,113 @@ body {
 }
 
 
+/*! Galeria !*/
+
+.section-galeria-fotos {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.titulo-galeria {
+    font-family: 'Montserrat', sans-serif;
+    color: #121619;
+    font-size: 120px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.titulo-galeria::after {
+    content: 'Galeria';
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #f0f0f0;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    letter-spacing: 3px;
+}
+
+.titulo-galeria::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: #306B34;
+    border-radius: 3px;
+}
+
+/* Grid para galeria */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.foto-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: brightness(35%) contrast(100%) saturate(80%);
+    transition: all 0.3s ease-in-out;
+}
+
+.foto-item:hover {
+    filter: brightness(100%) contrast(110%) saturate(100%); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.galeria-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    img {
+        image-rendering: auto;
+        display: block;
+        height: auto;
+        border-radius: 10px; /* Para bordas suaves */
+    }
+    
+}
+
+.foto-item:hover .galeria-img {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo-galeria {
+        font-size: 80px;
+    }
+
+    .titulo-galeria::after {
+        font-size: 30px;
+        top:30%
+    }
+
+    .titulo-galeria::before{
+        top:65%;
+    }
+
+}
+
+
 /*! Footer !*/
 
 .footer-section {
