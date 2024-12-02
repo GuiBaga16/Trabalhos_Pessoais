@@ -195,17 +195,13 @@ body {
 
 /* Animações das linhas */
 .typing-animation {
-    animation: typing 3s steps(40) 1s normal both, blinkCursorEnd 4s steps(40) normal both;
+    animation: typing 3s steps(40) 1s normal both, blinkCursor 500ms steps(40) infinite, disappearCursor 1s 3s forwards;
 }
 
 .typing-animation.delay {
-    animation: typing2 2s steps(20) 1s normal both, blinkCursor 500ms infinite;
+    animation: typing2 2s steps(20) 1s normal both, blinkCursor 500ms steps(20) infinite, disappearCursor 1s 3s forwards;
     animation-delay: 4s;
     border-right: 2px solid transparent;
-}
-
-.typing-animation {
-    animation: typing 3s steps(40) 1s normal both, blinkCursorEnd 4s steps(40) normal both;
 }
 
 /* Card de localização */
@@ -262,13 +258,14 @@ body {
     }
 
     to {
-        width: 9em;
+        width: 16em;
     }
 }
 
 @keyframes blinkCursorEnd {
+
     0%,
-    90% {
+    99% {
         border-right-color: #FF2E00;
     }
 
@@ -277,17 +274,18 @@ body {
     }
 }
 
-@keyframes blinkCursor {
+/* Animação para desaparecer o cursor após a digitação */
+@keyframes disappearCursor {
     0%,
-    50% {
-        border-right-color: transparent;
-    }
-
-    51%,
-    100% {
+    99% {
         border-right-color: #FF2E00;
     }
+
+    100% {
+        border-right-color: transparent;
+    }
 }
+
 
 @keyframes swing {
     0% {
@@ -525,7 +523,7 @@ body {
 
 .experiences-section h2::after {
     content: '!';
-    color: #FF2E00; 
+    color: #FF2E00;
     font-weight: bold;
 }
 
