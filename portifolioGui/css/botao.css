@@ -19,7 +19,7 @@
 
 
 .portfolio-experiment a .text {
-    color: #fff;    
+    color: #fff;
     /* padding: 0 0.3em; */
     font-family: 'Raleway';
     font-weight: bold;
@@ -131,4 +131,16 @@
 .portfolio-experiment a:hover .line.-bottom {
     transition: transform 0.5s cubic-bezier(0, .53, .29, 1) 0.56s;
     transform-origin: left;
+}
+
+@media (max-width: 768px) {
+    .portfolio-experiment {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+
+    .informacoes i{
+        display: none;
+    }
 }
