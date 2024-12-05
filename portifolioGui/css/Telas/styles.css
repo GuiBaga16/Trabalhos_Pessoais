@@ -320,14 +320,14 @@ body {
 .informacoes,
 .informacoes2 {
     display: flex;
-    justify-content: space-between;
+    text-align:justify;
+    word-spacing: -0.2px;
+    justify-content: space-between; 
     line-height: 1.4;
-    padding: 15px 30px;
     font-family: 'Raleway';
     margin-top: 50px;
     background-color: #121619;
     border-radius: 30px;
-    padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -339,10 +339,30 @@ body {
 
 .informacoes {
     font-size: 28px;
+    padding: 28px;
 }
 
 .informacoes2 {
     font-size: 22px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.seta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-seta {
+    font-size: 24px;
+    color: #FF2E00;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.icone-seta:hover {
+    transform: translateY(5px); /* Move a seta levemente para baixo ao passar o mouse */
 }
 
 .about {
