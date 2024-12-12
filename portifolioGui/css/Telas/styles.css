@@ -276,6 +276,7 @@ body {
 
 /* Animação para desaparecer o cursor após a digitação */
 @keyframes disappearCursor {
+
     0%,
     99% {
         border-right-color: #FF2E00;
@@ -320,9 +321,9 @@ body {
 .informacoes,
 .informacoes2 {
     display: flex;
-    text-align:justify;
+    text-align: justify;
     word-spacing: -0.2px;
-    justify-content: space-between; 
+    justify-content: space-between;
     line-height: 1.4;
     font-family: 'Raleway';
     margin-top: 50px;
@@ -362,7 +363,8 @@ body {
 }
 
 .icone-seta:hover {
-    transform: translateY(5px); /* Move a seta levemente para baixo ao passar o mouse */
+    transform: translateY(5px);
+    /* Move a seta levemente para baixo ao passar o mouse */
 }
 
 .about {
@@ -375,7 +377,8 @@ body {
 
 @media (max-width: 768px) {
 
-    .informacoes, .informacoes2{
+    .informacoes,
+    .informacoes2 {
         font-size: 20px;
         margin: 10px;
     }
@@ -628,11 +631,11 @@ body {
 }
 
 .contact-wrapper {
-    display: flex;  
-    justify-content: center; 
-    align-items: center; 
-    min-height: 60vh; 
-    padding: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
 }
 
 .contact-section .container {
@@ -686,7 +689,8 @@ body {
     font-size: 18px;
     transition: background-color 0.3s, transform 0.3s;
     font-family: 'Raleway';
-    white-space: nowrap; /* Evita quebra de linha */
+    white-space: nowrap;
+    /* Evita quebra de linha */
 }
 
 
@@ -756,4 +760,65 @@ body {
     color: #888;
     margin-top: 15px;
     text-align: center;
+}
+
+/** Responsivo **/
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .hamburger {
+        --hamburger-size: 20px;
+    }
+
+    .nav-links ul li a {
+        font-size: 25px;
+    }
+
+    .titulo{
+        font-size: 45px;
+    }
+
+    .top{
+        height: 80vh;
+    }
+
+    .imgPessoa{
+        width: 600px;
+    }
+
+    .line{
+        display: none;
+    }
+
+    .location-card {
+        width: 150px;
+        height: 50px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+    .location-content{
+        display: block;
+    }
+
+    .location-content i {
+        font-size: 16px;
+        color: #121619;
+        background-color:transparent;
+        padding: 0;
+        padding-bottom: 5px;
+        animation: swing 1.5s ease-in-out infinite;
+    }
+    
+    .location-content p {
+        font-size: 14px;
+        color: #e4e4e4;
+    }
+    
+
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
 }

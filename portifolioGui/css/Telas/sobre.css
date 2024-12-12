@@ -146,15 +146,50 @@ body {
 
 .aboutMe {
     display: flex;
-    gap: 150px;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebra em telas menores */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.content-text,
+.content-image {
+    flex: 1;
+    /* Ajusta automaticamente o tamanho */
+    min-width: 300px;
+    /* Garante um tamanho mínimo */
+}
+
+.descricaoFalandoSobre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #fff;
+}
+
+.localizacaoImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgEu {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .titulo-sobre {
     font-family: 'Montserrat', sans-serif;
     color: #121619;
     font-size: 120px;
+    margin-top: 50px;
+    text-align: center;
     font-weight: bold;
     position: relative;
     line-height: 1.2;
@@ -170,42 +205,22 @@ body {
     font-weight: bold;
     position: absolute;
     top: 45px;
-    left: 46%;
+    left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 .titulo-sobre::before {
     content: '';
     position: absolute;
     top: 100px;
-    left: 45%;
-    transform: translateX(-50%);
     width: 70px;
     height: 3px;
+    margin-left: 150px;
     background-color: #306B34;
     border-radius: 3px;
-}
-
-.imgEu {
-    object-fit: cover;
-    border-radius: 10px;
-    width: 400px;
-    height: 550px;
-    background-color: #121619;
-}
-
-.localizacaoImg{
-    padding-top: 20px;
-}
-
-.descricaoFalandoSobre {
-    font-size: 16px;
-    text-align: justify;
-    line-height: 1.5; 
-    font-family: 'Raleway';
-    color: #f9f9f9; 
 }
 
 
@@ -226,7 +241,6 @@ body {
     line-height: 1.2;
     opacity: 0.7;
     text-transform: uppercase;
-    white-space: nowrap;
 }
 
 .titulo-trabalho::after {
@@ -270,13 +284,13 @@ body {
     font-weight: bold;
     background-color: #306B34;
     opacity: 0.9;
-    padding: 5px 10px; 
-    display: inline-block; 
+    padding: 5px 10px;
+    display: inline-block;
     border-radius: 8px;
-    color: #fff; 
+    color: #fff;
 }
 
-.areaAtuada{
+.areaAtuada {
     color: #0077B6;
     font-weight: bold;
 }
@@ -296,7 +310,7 @@ body {
 
 /*! Formação e educação !*/
 
-.section-formacao-educacao{
+.section-formacao-educacao {
     padding-top: 80px;
     padding-bottom: 40px;
 }
@@ -330,7 +344,7 @@ body {
 .titulo-formacao::before {
     content: '';
     position: absolute;
-    top: 100px;
+    top: 105px;
     left: 50%;
     transform: translateX(-50%);
     width: 70px;
@@ -360,7 +374,7 @@ body {
     font-size: 17px;
     font-family: 'Montserrat';
     font-weight: bold;
-    color: #f0f0f0; 
+    color: #f0f0f0;
     margin-bottom: 8px;
 }
 
@@ -443,8 +457,8 @@ body {
 }
 
 .foto-item:hover {
-    filter: brightness(100%) contrast(110%) saturate(100%); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    filter: brightness(100%) contrast(110%) saturate(100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -458,9 +472,10 @@ body {
         image-rendering: auto;
         display: block;
         height: auto;
-        border-radius: 10px; /* Para bordas suaves */
+        border-radius: 10px;
+        /* Para bordas suaves */
     }
-    
+
 }
 
 .foto-item:hover .galeria-img {
@@ -475,11 +490,11 @@ body {
 
     .titulo-galeria::after {
         font-size: 30px;
-        top:30%
+        top: 30%
     }
 
-    .titulo-galeria::before{
-        top:65%;
+    .titulo-galeria::before {
+        top: 65%;
     }
 
 }
@@ -548,4 +563,223 @@ body {
     color: #888;
     margin-top: 15px;
     text-align: center;
+}
+
+/** Responsivo **/
+
+@media only screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .nav-links ul li a {
+        font-size: 28px;
+    }
+
+    /* Sobre mim */
+
+    .titulo-sobre {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 900;
+        top: 30px;
+        bottom: 0px;
+    }
+
+    .titulo-sobre::after {
+        text-align: center;
+        font-size: 30px;
+        top: 20px;
+        left: 50%;
+    }
+
+    .titulo-sobre::before {
+        display: none;
+    }
+
+    .imgEu {
+        display: none;
+    }
+
+    .descricaoFalandoSobre {
+        justify-content: center;
+        font-size: 14px;
+        margin-top: 70px;
+    }
+
+    /* Onde trabalhei */
+
+    .titulo-trabalho {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    .titulo-trabalho::after {
+        font-size: 30px;
+        top: 18px;
+    }
+
+    .titulo-trabalho::before {
+        display: none;
+    }
+
+    .periodoNaEmpresa {
+        margin-left: 50px;
+    }
+
+    .empresa {
+        flex-direction: column;
+        /* Empilha logo e texto */
+        text-align: center;
+    }
+
+    .logoCiamed {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .infCiamed {
+        font-size: 14px;
+    }
+
+    /* Formação e Educação */
+
+    .titulo-formacao {
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .titulo-formacao::after {
+        text-align: center;
+        font-size: 30px;
+        top: 18px;
+    }
+
+    .titulo-formacao::before {
+        display: none;
+    }
+
+    .cards-formacoes {
+        grid-template-columns: 1fr;
+    }
+
+    /* Galeria */
+
+    .titulo-galeria {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    .titulo-galeria::after {
+        text-align: center;
+        font-size: 30px;
+        top: 18px;
+    }
+
+    .titulo-galeria::before {
+        display: none;
+    }
+
+}
+
+/* Responsividade para tablets */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .titulo-sobre {
+        font-size: 90px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .titulo-sobre::after {
+        text-align: center;
+        font-size: 50px;
+        top: 25px
+    }
+
+    .titulo-sobre::before {
+        display: none;
+    }
+
+    .aboutMe {
+        gap: 100px;
+        display: flex;
+    }
+
+    .descricaoFalandoSobre {
+        justify-content: center;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* lugares onde trabalhei */
+
+    .titulo-trabalho {
+        font-size: 90px;
+        font-weight: 900;
+    }
+
+    .titulo-trabalho::after {
+        font-size: 50px;
+        top: 25px
+    }
+
+    .titulo-trabalho::before {
+        display: none;
+    }
+
+    .logoCiamed {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .infCiamed {
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    /* Formação e Educação */
+
+    .titulo-formacao {
+        font-size: 90px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .titulo-formacao::after {
+        text-align: center;
+        font-size: 50px;
+        top: 25px
+    }
+
+    .titulo-formacao::before {
+        display: none;
+    }
+
+    /* .cards-formacoes {
+        grid-template-columns: 10fr;
+    } */
+
+    /* Galeria */
+
+    .titulo-galeria {
+        text-align: center;
+        font-size: 90px;
+        font-weight: 900;
+    }
+
+    .titulo-galeria::after {
+        text-align: center;
+        font-size: 50px;
+        top: 25px
+    }
+
+    .titulo-galeria::before {
+        display: none;
+    }
+
 }
