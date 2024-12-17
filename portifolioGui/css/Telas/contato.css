@@ -310,6 +310,7 @@ button:hover {
 
     .titulo-contato::after{
         font-size: 30px;
+        font-weight: 900;
         top: 105px;
     }
 

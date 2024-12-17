@@ -144,3 +144,12 @@
         display: none;
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .portfolio-experiment {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-right: 100px;
+       text-align: center;
+    }
+}

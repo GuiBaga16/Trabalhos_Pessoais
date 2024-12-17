@@ -373,25 +373,6 @@ body {
     padding: auto;
 }
 
-/** responsivo **/
-
-@media (max-width: 768px) {
-
-    .informacoes,
-    .informacoes2 {
-        font-size: 20px;
-        margin: 10px;
-    }
-
-    .about {
-        text-align: center;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 100%;
-    }
-}
-
-
 /** section Projetos **/
 
 /*! Este título foi adaptado de Daniel Riemer !*/
@@ -776,19 +757,21 @@ body {
         font-size: 25px;
     }
 
-    .titulo{
-        font-size: 45px;
+    /** top **/
+
+    .titulo {
+        font-size: 40px;
     }
 
-    .top{
-        height: 80vh;
+    .top {
+        height: 65vh;
     }
 
-    .imgPessoa{
-        width: 600px;
+    .imgPessoa {
+        width: 500px;
     }
 
-    .line{
+    .line {
         display: none;
     }
 
@@ -798,27 +781,275 @@ body {
         background-color: transparent;
         box-shadow: none;
     }
-    
-    .location-content{
-        display: block;
+
+    .location-content {
+        /* display: block; */
+        border: 1px solid #FF2E00;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .location-content i {
+        font-size: 12px;
+        color: #121619;
+        background-color: transparent;
+        padding: 0;
+        /* padding-bottom: 5px; */
+        animation: swing 1.5s ease-in-out infinite;
+    }
+
+    .location-content p {
+
+        font-size: 12px;
+        color: #e4e4e4;
+    }
+
+    /** sobre mim **/
+
+    .informacoes,
+    .informacoes2 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .about {
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    /** experiencias **/
+
+    .experiences-section ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experiences-section li {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .experiences-section li i {
+        font-size: 35px;
+    }
+
+    /** Contato **/
+
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+        /* Título menor */
+    }
+
+    .contact-text {
+        font-size: 15px;
+        text-align: center;
+        /* Centraliza texto no celular */
+    }
+
+    .contact-section .container {
+        flex-direction: column;
+        /* Itens em coluna no celular */
+        gap: 15px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        /* Ícone acima do texto */
+        text-align: center;
+    }
+
+    /** footer **/
+
+    .footer-section {
+        padding: 20px 15px;
+        /* Reduz espaçamento lateral */
+    }
+
+    .h5Sociais {
+        font-size: 14px;
+    }
+
+    .sociais ul {
+        gap: 12px;
+    }
+
+    .sociais a {
+        font-size: 22px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .codeBy {
+        font-size: 12px;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .hamburger {
+        --hamburger-size: 20px;
+    }
+
+    .nav-links ul li a {
+        font-size: 25px;
+    }
+
+    /** top **/
+
+    .titulo {
+        font-size: 60px;
+    }
+
+    .top {
+        height: 80vh;
+    }
+
+    .imgPessoa {
+        width: 650px;
+    }
+
+    .line {
+        display: none;
     }
 
     .location-content i {
         font-size: 16px;
-        color: #121619;
-        background-color:transparent;
+        color: #888;
+        background-color: transparent;
         padding: 0;
-        padding-bottom: 5px;
+        /* padding-bottom: 5px; */
         animation: swing 1.5s ease-in-out infinite;
     }
-    
+
     .location-content p {
-        font-size: 14px;
+        font-size: 16px;
         color: #e4e4e4;
     }
-    
 
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+    /** Sobre mim **/ 
 
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .informacoes,
+    .informacoes2 {
+        flex-direction: column; 
+        text-align: left; 
+        padding: 20px; 
+        font-size: 20px; 
+        margin-top: 10px; 
+    }
+
+    .informacoes i,
+    .informacoes2 i {
+        padding-right: 5px; 
+    }
+
+    .informacoes {
+        font-size: 24px;
+    }
+
+    .informacoes2 {
+        font-size: 18px; 
+        margin-bottom: 15px; 
+    }
+
+    .seta {
+        justify-content: center; 
+        margin-top: 15px; 
+    }
+
+    .icone-seta {
+        font-size: 20px; 
+    }
+
+    .about {
+        flex-direction: column; 
+        gap: 10px; 
+        padding: 0 10px; 
+    }
+
+    /** Proetos recentes **/
+
+    .projects-section {
+        padding: 30px 10px; /* Reduz o padding para otimizar espaço */
+        text-align: center; /* Mantém o texto centralizado */
+    }
+
+    .project-item {
+        padding: 80px 20px; /* Reduz o padding interno */
+        height: auto; /* Permite altura automática para melhor adaptação */
+    }
+
+    .project-title {
+        font-size: 25px; /* Ajusta o tamanho da fonte */
+    }
+
+    .project-overlay {
+        background-color: rgba(0, 0, 0, 0.4); /* Intensifica o fundo para tablets */
+    }
+
+    .project-image {
+        max-width: 100%; /* Garante que a imagem se ajuste ao container */
+        max-height: 150px; /* Reduz a altura máxima da imagem */
+        border-radius: 8px; /* Ajusta a borda */
+    }
+
+    .view-button {
+        width: 50px; /* Reduz o tamanho do botão */
+        height: 50px; /* Reduz o tamanho do botão */
+        font-size: 14px; /* Diminui o tamanho do texto */
+    }
+
+    .btnMais {
+        font-size: 1rem; /* Reduz o tamanho do botão */
+        padding: 10px 15px; /* Ajusta o padding */
+    }
+
+    .lugarBtn {
+        margin-top: 40px; /* Reduz o espaçamento superior */
+    }
+
+    /** experiencias **/
+
+    .experiences-section ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .experiences-section h2 {
+        font-size: 28px;
+    }
+
+    #description {
+        font-size: 15px;
+    }
+
+    /** Contato **/
+
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .contact-text {
+        font-size: 16px;
+    }
+
+    .btnContato {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
 }
