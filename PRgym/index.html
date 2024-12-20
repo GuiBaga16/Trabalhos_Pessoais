@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academia Auxiliar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background: #272727;">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="./img/PR.png" alt="Bootstrap" width="50" height="50">
+            </a>
+            <!-- Botão Hamburguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Menu de navegação">
+                <span class="navbar-toggler-icon custom-toggler"></span>
+            </button>
+
+            <!-- Itens do menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white font-roboto" href="pages/treino.html">Treinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white font-roboto" href="./calculadora.html">Calculadoras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white font-roboto" href="pages/progresso.html">Progresso</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header style="background: url('./img/indexBackG.jpg') center/cover no-repeat; margin-top: 70px;"
+        class="text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 font-oswald">Power Revolution</h1>
+            <p>Seus treinos, progresso e resultados. Balançando as metas.</p>
+        </div>
+    </header>
+
+    <!-- Acordeom para dias da semana -->
+    <section class="container py-5">
+        <div class="container text-center">
+            <h2 class="text-center mb-4 font-oswald">Seu Treino</h2>
+            <p>Cadastre os exercícios a serem feitos.</p>
+        </div>
+
+        <div id="accordion"></div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const days = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+                const accordionContainer = document.getElementById('accordion');
+
+                // Recupera as listas de treinos armazenadas do localStorage
+                const savedLists = days.reduce((acc, day) => {
+                    const savedList = JSON.parse(localStorage.getItem(day)) || [];
+                    acc[day] = savedList;
+                    return acc;
+                }, {});
+
+                days.forEach(day => {
+                    // Adiciona cada dia ao acordeom
+                    accordionContainer.innerHTML += `
+                        <div class="accordion-item" style="background-color: #e2e2e2; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+                            <h2 class="accordion-header" id="heading${day}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${day}" aria-expanded="false" aria-controls="collapse${day}">
+                                    <i class="fas fa-chevron-down me-2"></i>${day}
+                                </button>
+                            </h2>
+                            <div id="collapse${day}" class="accordion-collapse collapse" aria-labelledby="heading${day}">
+                                <div class="accordion-body">
+                                    <h2 class="accordion-header" id="headingCadastro${day}">
+                                        <button class="accordion-button collapsed" style="color: #DC3545;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCadastro${day}" aria-expanded="false" aria-controls="collapseCadastro${day}">
+                                            Cadastro <i class="fa-solid fa-chevron-down" style="margin-left: 8px;"></i>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseCadastro${day}" class="accordion-collapse collapse" aria-labelledby="headingCadastro${day}">
+                                        <form class="form-treino" id="form-${day}">
+                                            <div class="row">
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="exercicio-${day}" class="form-label">Exercício</label>
+                                                    <input type="text" id="exercicio-${day}" class="form-control" placeholder="Ex: Supino reto">
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="series-${day}" class="form-label">Séries</label>
+                                                    <input type="number" id="series-${day}" class="form-control" placeholder="0">
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="repeticoes-${day}" class="form-label">Repetições</label>
+                                                    <input type="number" id="repeticoes-${day}" class="form-control" placeholder="0">
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="carga-${day}" class="form-label">Carga (kg)</label>
+                                                    <input type="number" id="carga-${day}" class="form-control" placeholder="0">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-danger w-100 font-roboto">Adicionar ao Treino</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <h2 class="accordion-header" id="headingListagem${day}">
+                                    <button class="accordion-button collapsed" style="color: #DC3545;" padding-right:20px; type="button" data-bs-toggle="collapse" data-bs-target="#collapseListagem${day}" aria-expanded="false" aria-controls="collapseListagem${day}">
+                                        Listagem <i class="fa-solid fa-chevron-down" style="margin-left: 8px;"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapseListagem${day}" class="accordion-collapse collapse" aria-labelledby="headingListagem${day}">
+                                    <div class="accordion-body">
+                                        <ul class="list-group mt-3" id="lista-treinos-${day}">
+                                            ${savedLists[day].map(item => `
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    ${item.exercicio} - ${item.series} séries x ${item.repeticoes} repetições - ${item.carga} kg
+                                                    <button class="btn btn-danger btn-sm remove-item">Excluir</button>
+                                                </li>
+                                            `).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    // Adiciona evento ao formulário para capturar e exibir os treinos
+                    document.addEventListener('submit', (event) => {
+                        if (event.target.id === `form-${day}`) {
+                            event.preventDefault(); // Evita recarregar a página
+
+                            const exercicio = document.getElementById(`exercicio-${day}`).value;
+                            const series = document.getElementById(`series-${day}`).value;
+                            const repeticoes = document.getElementById(`repeticoes-${day}`).value;
+                            const carga = document.getElementById(`carga-${day}`).value;
+
+                            if (exercicio && series && repeticoes && carga) {
+                                const lista = document.getElementById(`lista-treinos-${day}`);
+                                const item = {
+                                    exercicio,
+                                    series,
+                                    repeticoes,
+                                    carga
+                                };
+
+                                // Carrega a lista existente do localStorage ou inicia uma nova
+                                const savedList = JSON.parse(localStorage.getItem(day)) || [];
+                                savedList.push(item);
+                                localStorage.setItem(day, JSON.stringify(savedList)); // Salva os dados no localStorage
+
+                                // Adiciona o exercício à lista
+                                const li = document.createElement('li');
+                                li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+                                li.innerHTML = `${item.exercicio} - ${item.series} séries x ${item.repeticoes} repetições - ${item.carga} kg <button class="btn btn-danger btn-sm remove-item">Excluir</button>`;
+                                lista.appendChild(li);
+
+                                // Reseta o formulário
+                                document.getElementById(`form-${day}`).reset();
+                            }
+                        }
+                    });
+
+                    // Adiciona evento de clique para remover exercício
+                    document.addEventListener('click', (event) => {
+                        if (event.target.classList.contains('remove-item')) {
+                            const item = event.target.parentElement;
+                            const exercicio = item.textContent.split(' - ')[0];
+                            const dayKey = Object.keys(savedLists).find(key => savedLists[key].some(savedItem => savedItem.exercicio === exercicio));
+
+                            // Remove do localStorage
+                            const updatedList = savedLists[dayKey].filter(savedItem => savedItem.exercicio !== exercicio);
+                            localStorage.setItem(dayKey, JSON.stringify(updatedList));
+
+                            // Remove da lista na interface
+                            item.remove();
+                        }
+                    });
+                });
+
+                // Rotaciona o ícone quando clicado
+                document.querySelectorAll('.accordion-button').forEach(button => {
+                    button.addEventListener('click', function () {
+                        this.querySelector('.fas').classList.toggle('rotate-180');
+                    });
+                });
+            });
+        </script>
+    </section>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
