@@ -4,6 +4,12 @@
 
 body {
     overflow-x: hidden;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* Menu --------------------------- */
@@ -132,7 +138,7 @@ html {
 /* Inicio --------------------------- */
 
 .topPage {
-    background: url(../img/Background.png) no-repeat center center;
+    background: url(../img/Background.jpg) no-repeat center center;
     width: 100%;
     height: 800px;
     display: flex;
@@ -225,16 +231,23 @@ html {
 }
 
 .imgPessoa {
-    width: 500px;
+    width: 200px;
     height: 200px;
     display: flex;
+    color: white;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    background: #838383d8;
     font-family: Arial, sans-serif;
 }
 
 /* Section 3 --------------------------- */
+
+.imgServico{
+    color:#fff;
+    width: 30%;
+}
 
 .section-3 h2 {
     font-size: 30px;
@@ -265,7 +278,7 @@ html {
     border-style: solid;
     border-color: #FFBE00;
     border-radius: 30px 10px;
-    background-color: #0e5abd;
+    background-color: #111E4B;
     padding: 20px 20px 30px 20px;
     border-width: 0px 0px 4px 0px;
     box-shadow: 0px 13px 21px rgba(0, 0, 0, 0.5);
@@ -314,7 +327,7 @@ html {
 
 
 .cata-vento {
-    background:url(../img/cata-backgroud.png) ;
+    background:url(../img/cata-backgroud.jpg) ;
     background-size:cover;
 }
 
@@ -547,7 +560,7 @@ html {
 .contatos h3 {
     font-size: 20px;
     margin-top: 20px;
-    color: #d60c0c;
+    color: #111E4B;
     font-weight: bold;
     font-family: 'Poppins';
 }
@@ -566,7 +579,7 @@ html {
 
 /* Section 7 --------------------------- */
 
-/* .section-7 h2 {
+ /* .section-7 h2 {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -615,11 +628,11 @@ html {
 }
 
 .section-7 {
-    background: url(../img/blur-background-2.jpg) no-repeat center center;
+    background: url(../img/backG_comments.jpg) no-repeat center center;
     width: 100%;
     padding: 30px;
     background-size: cover;
-} */
+}  */
 
 /* section 8 --------------------------- */
 
@@ -628,7 +641,7 @@ html {
     text-align: center;
     padding: 40px 20px;
     box-sizing: border-box;
-    background-color: #24636C;
+    background-color: #111E4B;
 }
 
 .section-8 img {
@@ -748,7 +761,7 @@ html {
 }
 
 .corAzul {
-    color: #0e5abd;
+    color: #111E4B;
 }
 
 .corVermelho {
@@ -776,4 +789,23 @@ html {
 
 .botao:hover {
     background: linear-gradient(#b92a28, #701515);
+}
+
+.botao2 {
+    border: none;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    font-family: 'poppins';
+    text-transform: uppercase;
+    box-shadow: 0px 13px 21px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(#0e5abd, #111E4B);
+}
+
+.botao2:hover {
+    background: linear-gradient(#083775, #0a112c);
 }

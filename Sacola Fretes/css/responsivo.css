@@ -44,15 +44,6 @@
         font-size: 31px;
     }
 
-    .section-2 p{
-        font-size: 15px;
-    }
-
-    .imgPessoa {
-        width: 60%;
-        height: 150px;
-    }
-
     /* Seção 3 */
     .section-3 h2 {
         font-size: 31px;
@@ -71,7 +62,7 @@
     }
 
     /* Seção 3.5 */
-    .grid-1-2 {
+     .grid-1-2 {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -92,7 +83,7 @@
 
     .titulo-3_5 {
         font-size: 24px;
-    }
+    } 
 
 
     /* Seção 4 */
@@ -280,8 +271,7 @@
     /* section 2 */
 
     .section-2 img {
-        max-width: 70%;
-        max-height: 200px;
+        max-width: 100%;
         margin-bottom: 20px;
     }
 
@@ -342,13 +332,12 @@
         font-size: 20px;
     }
 
-    .section-3_5 p,
+    .section-3_5 p, 
     .section-3_5 li {
         font-size: 14px;
     }
 
-    .ar-condicionado,
-    .cata-vento {
+    .ar-condicionado, .cata-vento {
         padding: 20px;
     }
 
