@@ -50,9 +50,9 @@ body {
 :root {
     --primary-color: #306B34;
     --background-color: #121619;
-    --menu-overlay: rgba(0, 0, 0, 0.842);
+    --menu-overlay: rgba(0, 0, 0, 0.938);
     --text-color: white;
-    --font-family: 'Montserrat', sans-serif;
+    --font-family: 'Raleway';
     --hamburger-size: 30px;
 }
 
@@ -101,8 +101,15 @@ body {
 .nav-links ul li a {
     color: var(--text-color);
     text-decoration: none;
+    font-weight:500;
     font-size: 35px;
     font-family: var(--font-family);
+}
+
+.nav-links ul li a i {
+    margin-right: 5px;
+    font-size:medium;
+    color: var(--primary-color);
 }
 
 /* Estilizar o ícone de hambúrguer */
@@ -140,7 +147,6 @@ body {
 .nav-links.active {
     transform: translateY(0);
 }
-
 
 /*TODO Contedo */
 
