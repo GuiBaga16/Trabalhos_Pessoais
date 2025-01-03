@@ -3,8 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /** Estilizações gerais **/
-body {
+
+html {
     overflow-x: hidden;
+}
+
+body {
     background-color: #222;
     color: #fff;
 }
@@ -13,7 +17,7 @@ main {
     padding-bottom: 20px;
 }
 
-/*! Scroll !*/
+/** Scroll **/
 
 /* Estilo para o container principal */
 body {
@@ -607,7 +611,7 @@ body {
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
-    max-width: 800px;
+    max-width: 1000px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -631,12 +635,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: bold;
-    margin: 0 0 30px;
+    margin-bottom: 30px;
 }
 
 .contact-info {
     display: flex;
     align-items: center;
+    padding-left: 60px;
     margin-bottom: 20px;
 }
 
@@ -655,10 +660,11 @@ body {
     font-family: 'Montserrat';
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .btnContato {
+    margin-right: 25px;
     padding: 12px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -671,7 +677,7 @@ body {
     transition: background-color 0.3s, transform 0.3s;
     font-family: 'Raleway';
     white-space: nowrap;
-    /* Evita quebra de linha */
+    
 }
 
 
@@ -836,31 +842,36 @@ body {
 
     /** Contato **/
 
-    .contact-section {
-        padding: 40px 15px;
-    }
-
     .contact-title {
         font-size: 28px;
-        /* Título menor */
     }
 
     .contact-text {
         font-size: 15px;
-        text-align: center;
-        /* Centraliza texto no celular */
+        padding-right: 60px;
+        white-space: nowrap;
+        padding-left: 0;
+        text-align: center; 
+    }
+
+    .contact-icon {
+        font-size: 20px;
+        padding-right: 60px;
+        padding-bottom: 10px;
     }
 
     .contact-section .container {
         flex-direction: column;
-        /* Itens em coluna no celular */
         gap: 15px;
     }
 
     .contact-info {
         flex-direction: column;
-        /* Ícone acima do texto */
         text-align: center;
+    }
+
+    .btnContato {
+        margin-left: 30px;
     }
 
     /** footer **/
@@ -937,26 +948,26 @@ body {
         color: #e4e4e4;
     }
 
-    /** Sobre mim **/ 
+    /** Sobre mim **/
 
     .about-section {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
     }
 
     .informacoes,
     .informacoes2 {
-        flex-direction: column; 
-        text-align: left; 
-        padding: 20px; 
-        font-size: 20px; 
-        margin-top: 10px; 
+        flex-direction: column;
+        text-align: left;
+        padding: 20px;
+        font-size: 20px;
+        margin-top: 10px;
     }
 
     .informacoes i,
     .informacoes2 i {
-        padding-right: 5px; 
+        padding-right: 5px;
     }
 
     .informacoes {
@@ -964,64 +975,79 @@ body {
     }
 
     .informacoes2 {
-        font-size: 18px; 
-        margin-bottom: 15px; 
+        font-size: 18px;
+        margin-bottom: 15px;
     }
 
     .seta {
-        justify-content: center; 
-        margin-top: 15px; 
+        justify-content: center;
+        margin-top: 15px;
     }
 
     .icone-seta {
-        font-size: 20px; 
+        font-size: 20px;
     }
 
     .about {
-        flex-direction: column; 
-        gap: 10px; 
-        padding: 0 10px; 
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px;
     }
 
     /** Proetos recentes **/
 
     .projects-section {
-        padding: 30px 10px; /* Reduz o padding para otimizar espaço */
-        text-align: center; /* Mantém o texto centralizado */
+        padding: 30px 10px;
+        /* Reduz o padding para otimizar espaço */
+        text-align: center;
+        /* Mantém o texto centralizado */
     }
 
     .project-item {
-        padding: 80px 20px; /* Reduz o padding interno */
-        height: auto; /* Permite altura automática para melhor adaptação */
+        padding: 80px 20px;
+        /* Reduz o padding interno */
+        height: auto;
+        /* Permite altura automática para melhor adaptação */
     }
 
     .project-title {
-        font-size: 25px; /* Ajusta o tamanho da fonte */
+        font-size: 25px;
+        /* Ajusta o tamanho da fonte */
     }
 
     .project-overlay {
-        background-color: rgba(0, 0, 0, 0.4); /* Intensifica o fundo para tablets */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Intensifica o fundo para tablets */
     }
 
     .project-image {
-        max-width: 100%; /* Garante que a imagem se ajuste ao container */
-        max-height: 150px; /* Reduz a altura máxima da imagem */
-        border-radius: 8px; /* Ajusta a borda */
+        max-width: 100%;
+        /* Garante que a imagem se ajuste ao container */
+        max-height: 150px;
+        /* Reduz a altura máxima da imagem */
+        border-radius: 8px;
+        /* Ajusta a borda */
     }
 
     .view-button {
-        width: 50px; /* Reduz o tamanho do botão */
-        height: 50px; /* Reduz o tamanho do botão */
-        font-size: 14px; /* Diminui o tamanho do texto */
+        width: 50px;
+        /* Reduz o tamanho do botão */
+        height: 50px;
+        /* Reduz o tamanho do botão */
+        font-size: 14px;
+        /* Diminui o tamanho do texto */
     }
 
     .btnMais {
-        font-size: 1rem; /* Reduz o tamanho do botão */
-        padding: 10px 15px; /* Ajusta o padding */
+        font-size: 1rem;
+        /* Reduz o tamanho do botão */
+        padding: 10px 15px;
+        /* Ajusta o padding */
     }
 
     .lugarBtn {
-        margin-top: 40px; /* Reduz o espaçamento superior */
+        margin-top: 40px;
+        /* Reduz o espaçamento superior */
     }
 
     /** experiencias **/
@@ -1041,15 +1067,34 @@ body {
     /** Contato **/
 
     .contact-title {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .contact-text {
-        font-size: 16px;
+        font-size: 15px;
+        padding-right: 20px;
+        text-align: center; 
+    }
+
+    .contact-info {
+        padding-left: 0px;
+    }
+
+    .contact-icon {
+        font-size: 20px;
+        padding-right: 5px;
+    }
+
+    .entreEmContato {
+        font-family: 'Montserrat';
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 30px;
     }
 
     .btnContato {
         font-size: 16px;
-        padding: 10px 16px;
+        margin-left: 15px;
+        padding: 10px 12px;
     }
 }
