@@ -1,0 +1,155 @@
+/** Button sobre mim **/
+
+.portfolio-experiment {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.portfolio-experiment a {
+    /* color: #1f1f1f; */
+    padding: 0.7em calc(0.7em * 1.2);
+    display: inline-block;
+    border: 3px solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    text-decoration: none;
+    /* Remove a decoração padrão */
+}
+
+
+.portfolio-experiment a .text {
+    color: #fff;
+    /* padding: 0 0.3em; */
+    font-family: 'Raleway';
+    font-weight: bold;
+    transform: translate3d(0, 0.7em, 0);
+    display: block;
+    transition: transform 0.4s cubic-bezier(.2, 0, 0, 1) 0.4s;
+}
+
+.portfolio-experiment a:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: calc(0.7em * 1.2);
+    right: calc(0.7em * 1.2);
+    height: 3px;
+    background: #FF2E00;
+    transition:
+        transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s,
+        right 0.2s cubic-bezier(.04, .48, 0, 1) 0.6s,
+        left 0.4s cubic-bezier(.04, .48, 0, 1) 0.6s;
+    transform-origin: left;
+}
+
+.portfolio-experiment .line {
+    position: absolute;
+    background: #FF2E00;
+}
+
+.portfolio-experiment .line.-right,
+.portfolio-experiment .line.-left {
+    width: 3px;
+    bottom: -3px;
+    top: -3px;
+    transform: scale3d(1, 0, 1);
+}
+
+.portfolio-experiment .line.-top,
+.portfolio-experiment .line.-bottom {
+    height: 3px;
+    left: -3px;
+    right: -3px;
+    transform: scale3d(0, 1, 1);
+}
+
+.portfolio-experiment .line.-right {
+    right: -3px;
+    transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.23s;
+    transform-origin: top;
+}
+
+.portfolio-experiment .line.-top {
+    top: -3px;
+    transition: transform 0.08s linear 0.43s;
+    transform-origin: left;
+}
+
+.portfolio-experiment .line.-left {
+    left: -3px;
+    transition: transform 0.08s linear 0.51s;
+    transform-origin: bottom;
+}
+
+.portfolio-experiment .line.-bottom {
+    bottom: -3px;
+    transition: transform 0.3s cubic-bezier(1, 0, .65, 1.01);
+    transform-origin: right;
+}
+
+/* .portfolio-experiment a:hover,
+.portfolio-experiment a:active {
+    /* Regras para hover/active 
+} */
+
+.portfolio-experiment a:hover .text {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s cubic-bezier(.2, 0, 0, 1) 0.4s;
+}
+
+.portfolio-experiment a:hover:after {
+    transform: scale3d(0, 1, 1);
+    right: -3px;
+    left: -3px;
+    transform-origin: right;
+    transition:
+        transform 0.2s cubic-bezier(1, 0, .65, 1.01) 0.17s,
+        right 0.2s cubic-bezier(1, 0, .65, 1.01),
+        left 0s 0.3s;
+}
+
+.portfolio-experiment a:hover .line {
+    transform: scale3d(1, 1, 1);
+}
+
+.portfolio-experiment a:hover .line.-right {
+    transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.2s;
+    transform-origin: bottom;
+}
+
+.portfolio-experiment a:hover .line.-top {
+    transition: transform 0.08s linear 0.4s;
+    transform-origin: right;
+}
+
+.portfolio-experiment a:hover .line.-left {
+    transition: transform 0.08s linear 0.48s;
+    transform-origin: top;
+}
+
+.portfolio-experiment a:hover .line.-bottom {
+    transition: transform 0.5s cubic-bezier(0, .53, .29, 1) 0.56s;
+    transform-origin: left;
+}
+
+@media (max-width: 768px) {
+    .portfolio-experiment {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+
+    .informacoes i{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .portfolio-experiment {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-right: 100px;
+       text-align: center;
+    }
+}
