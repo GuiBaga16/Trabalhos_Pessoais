@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="stylesheet" href="./css/Telas/contato.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b69b72d80.js" crossorigin="anonymous"></script>
+    <title>Contato - Guilherme Bagatini</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar" data-aos="fade-down" data-aos-duration="1000">
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobreTela.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="alinhamento-titulo">
+                <h1 class="titulo-contato">Contato</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="contato">
+        <div class="container">
+            <div class="contato-formulario">
+                <h2>Entre em contato</h2>
+                <form action="https://formspree.io/f/xqakogqr" method="POST">
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+                    
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Sua mensagem"></textarea>
+                    
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+                                
+            </div>
+
+            <div class="contato-info">
+                <h3>Me encontre em:</h3>
+                <p><i class="fas fa-map-marker-alt"></i>Encantado, Rio Grande Do Sul</p>
+                <p><i class="fas fa-phone"></i> (51) 99599-5875</p>
+                
+                <div class="contato-redes">
+                    <a href="#" id="whatsapp-btn" class="whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="mailto:contato@bagadev.com" class="email">
+                        <i class="fas fa-envelope"></i> E-mail
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="./js/whats.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
