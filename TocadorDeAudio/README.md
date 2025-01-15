@@ -14,7 +14,7 @@ O vite fui útilizado como um boilerplate para a construçõa do projeto.
 
 OBS: coloquei apenas 3 audios dentro do projeto para não ficar pesado, mas todos os botões funcionam.
 
-#Para executar:
+# Para executar:
 
 1 clonar o projeto;
 2 abrir um terminal e colocar: npm run dev
