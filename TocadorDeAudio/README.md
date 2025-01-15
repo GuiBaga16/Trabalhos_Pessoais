@@ -17,4 +17,5 @@ OBS: coloquei apenas 3 audios dentro do projeto para não ficar pesado, mas todo
 # Para executar:
 
 1 clonar o projeto;
+
 2 abrir um terminal e colocar: npm run dev
