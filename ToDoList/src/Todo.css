@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2E3532;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 30 auto;
+    margin-bottom: 50px;
+}
+
+input {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.button-add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.button-add:hover {
+    background-color: #45a049;
+}
+
+.imagemCentral{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+.listaTarefas {
+    display: flex;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: auto;
+}
+
+.item { 
+    width: 100%;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    margin-bottom: 5px auto;
+    cursor: pointer;
+    border: 1px solid #232725;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 10px;
+}
+
+.item:hover{
+    background-color: #242726;
+}
+
+.item.completo  {
+    width: 100%;
+    color: #131212;
+    background-color: #1c1f1de1;
+}
+
+.item.completo span{
+    text-decoration: line-through #000000;
+}
+
+.item.completo:hover{
+    background-color: #111312e1;
+}
+
+.button-remove {
+    font-family: 'Montserrat', sans-serif;
+    background-color:transparent;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button-remove:hover {
+    color: #9e1d1d;
+}
+
+.deleteAll{
+    border:1px solid #9e1d1d ;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.deleteAll:hover{
+    background-color: #9e1d1d;
+}
+
+@media screen and (max-width: 900px) {
+    form {
+        width: 100%;
+    }
+
+    .listaTarefas {
+        width: 90%;
+    }
+}
