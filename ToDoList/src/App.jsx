@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Todo.css';
 import Icone from './assets/toDoImage.png';
 
 function Todo() {
 
-  const [lista, setLista] = useState([]);
+  const listaStorage = localStorage.getItem('lista');
+
+  const [lista, setLista] = useState(listaStorage ? JSON.parse(listaStorage) : []);
   const [novoIten, setNovoIten] = useState("");
 
-const listaStorage = localStorage.getItem('lista'); 
+  useEffect(() => {
+    localStorage.setItem('lista', JSON.stringify(lista));
+  },[lista]);
 
-  
   function adicionarItem(form) {
     form.preventDefault();
     if (!novoIten) {
