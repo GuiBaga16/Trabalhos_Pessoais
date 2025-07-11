@@ -22,6 +22,14 @@ Utilizei provisoriamente o Netlify para hospedar meu site.<br>
   <li>Foram utilizado marcadores de seção para um melhor entedimento;</li>
 </ul>
 
+<br>
+<h4>Comandos para comitar</h4>
+<ul>
+<li>git add . || git add JogoRPG</li>
+<li>git commit -m "Descrição do progresso ou mudanças feitas"</li>
+<li>git push</li>
+</ul>
+
 OBS: Este é o meu primeiro projeto disponivel na web, apesar das dificuldades
 fiquei satisfeito com os resultados.
 
